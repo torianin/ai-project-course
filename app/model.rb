@@ -16,7 +16,7 @@ class PostgresConnector
 		CREATE TABLE query (
 			id_query serial PRIMARY KEY,
 			query_text text NOT NULL,
-			date timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+			date timestamp without time zone DEFAULT CURRENT_TIMESTAMP
 		);
 		");
 	end
