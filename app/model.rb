@@ -45,6 +45,6 @@ end
 def addQuery(query)
 	p = PostgresConnector.new()
 	p.connect
-	p.add(query)
+	p.addQuery(query)
 	p.disconnect
 end
