@@ -12,5 +12,8 @@ end
 post '/ask' do
 	query = params[:query]
 	addQuery(query)
-	"Powiedziałeś '#{params[:query]}'"
+	if params[:query] == 'Cześć Robcio'
+		return "Kocham Cię"
+	else
+		return "Nie kocham Cię"
 end

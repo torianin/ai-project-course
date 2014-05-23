@@ -13,16 +13,11 @@
         $('body').terminal(function(command, term) {
             $.post("ask",
             {
-              query:command,
+                query:command,
             },
             function(data,status){
-              alert("Data: " + data + "\nStatus: " + status);
+                term.echo(data);
             });
-            if (command == 'Cześć Robcio') {
-                term.echo("Kocham Cię");
-            } else {
-                term.echo('Nie kocham Cię');
-            }
         }, {
         greetings: 'Witam serdecznie na mojej stronie.',
         name: 'love',
