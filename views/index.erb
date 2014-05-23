@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>:: TORIANIN PAGE ::</title>
+    <meta name="author" content="Robert Ignasiak"/>
+    <script src="/js/jquery-1.7.1.min.js"></script>
+    <script src="/js/jquery.mousewheel-min.js"></script>
+    <script src="/js/jquery.terminal-min.js"></script>
+    <link href="/css/jquery.terminal.css" rel="stylesheet"/>
+    <script>
+    jQuery(document).ready(function($) {
+        $('body').terminal(function(command, term) {
+            if (command == 'Cześć Robcio') {
+                term.echo("Kocham Cię");
+            } else {
+                term.echo('Nie kocham Cię');
+            }
+        }, {
+        greetings: 'Witam serdecznie na mojej stronie.',
+        name: 'love',
+        height: 200,
+        width: 450,
+        prompt: ''});
+    });
+    </script>
+  </head>
+<body>
+</body>
