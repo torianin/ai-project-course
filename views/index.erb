@@ -11,6 +11,14 @@
     <script>
     jQuery(document).ready(function($) {
         $('body').terminal(function(command, term) {
+            $.post("ask",
+            {
+              name:"Donald Duck",
+              city:"Duckburg"
+            },
+            function(data,status){
+              alert("Data: " + data + "\nStatus: " + status);
+            });
             if (command == 'Cześć Robcio') {
                 term.echo("Kocham Cię");
             } else {

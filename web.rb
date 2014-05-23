@@ -10,6 +10,5 @@ get '/reset' do
 end
 
 post '/ask' do
-	query = params[:query]
-	addQuery(query)
+  "You said '#{params}'"
 end
