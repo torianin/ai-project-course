@@ -21,9 +21,9 @@ class PostgresConnector
 		");
 	end
 
-	  def prepareInsertUserStatement
-	    @conn.prepare("insert_query", "insert into query (query_text) values ($1)")
-	  end
+	def prepareInsertUserStatement
+		@conn.prepare("insert_query", "insert into query (query_text) values ($1)")
+	end
 
 	def addQuery(query)
     	@conn.exec_prepared("insert_query", [query])
@@ -45,6 +45,7 @@ end
 def addQuery(query)
 	p = PostgresConnector.new()
 	p.connect
+	p.prepareInsertUserStatement
 	p.addQuery(query)
 	p.disconnect
 end
