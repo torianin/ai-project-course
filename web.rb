@@ -10,6 +10,5 @@ get '/reset' do
 end
 
 post '/ask' do
-	query = params
-	addQuery(query)
+  "Powiedziałeś '#{params[:message]}'"
 end
