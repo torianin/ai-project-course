@@ -1,7 +1,7 @@
 require 'sinatra'
 require './app/model'
 
-get '/' do
+get '/:query' do
 	query = params[:query]
 	if query
 		addQuery(query)
