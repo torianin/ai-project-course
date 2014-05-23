@@ -16,4 +16,5 @@ post '/ask' do
 		return "Kocham Cię"
 	else
 		return "Nie kocham Cię"
+	end
 end
