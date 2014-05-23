@@ -2,6 +2,10 @@ require 'sinatra'
 require './app/model'
 
 get '/' do
+	query = params[:query]
+	if query
+		addQuery(query)
+	end
 	erb :index
 end
 
