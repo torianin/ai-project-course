@@ -1,3 +1,4 @@
+require './utilities'
 require 'programr'
 
 class Alice
@@ -7,6 +8,7 @@ class Alice
 	end
 
 	def askAlice(question)
+		removeSpacialChars(question)
 		reaction = @robot.get_reaction(question)
 	end
 end
