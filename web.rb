@@ -1,5 +1,6 @@
 require 'sinatra'
 require './app/model'
+require './app/programr'
 
 get '/' do
 	erb :index
@@ -15,6 +16,6 @@ post '/ask' do
 	if params[:query] == 'Cześć Robcio'
 		return "[[b;red;black]Kocham Cię]"
 	else
-		return "Nie kocham Cię"
+		return askAlice(query)
 	end
 end

@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     pg (0.17.1)
+    programr (0.0.1)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -16,4 +17,5 @@ PLATFORMS
 
 DEPENDENCIES
   pg
+  programr
   sinatra (= 1.4.5)
