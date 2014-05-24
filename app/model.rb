@@ -10,7 +10,6 @@ class PostgresConnector
 	    @conn = PGconn.open(:host =>  host, :dbname => db, :user=> username, :password=> password)
 	end
 
-	# Create tables
 	def createTables
 		@conn.exec("DROP TABLE IF EXISTS query CASCADE;
 		CREATE TABLE query (

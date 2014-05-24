@@ -80,7 +80,7 @@
 }
 .terminal .terminal-output div div, .cmd .prompt {
     display: block;
-    line-height: 14px;
+    line-height: 16px;
     height: auto;
 }
 .cmd .prompt {
@@ -90,7 +90,7 @@
     font-family: FreeMono, monospace;
     color: #aaa;
     background-color: #000;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 14px;
 }
 .terminal-output > div {
