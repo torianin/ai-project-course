@@ -1,5 +1,5 @@
 def removeSpacialChars(text)
-    text = self.downcase
+    text = text.downcase
     text
     text.gsub!(/[âäàãáäå�?ăąǎǟǡǻ�?ȃȧẵặ]/,'a')
     text.gsub!(/[ëêéèẽēĕėẻȅȇẹȩęḙḛ�?ếễểḕḗệ�?]/,'e')
