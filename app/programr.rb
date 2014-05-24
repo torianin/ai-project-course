@@ -11,4 +11,4 @@ class Alice
 	end
 end
 
-a = Alice.new()
+$alice = Alice.new()
