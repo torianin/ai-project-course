@@ -16,6 +16,6 @@ post '/ask' do
 	if params[:query] == 'Cześć Robcio'
 		return "[[b;red;black]Kocham Cię]"
 	else
-		return a.askAlice(query)
+		return $alice.askAlice(query)
 	end
 end
