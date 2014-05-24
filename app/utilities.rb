@@ -1,9 +1,23 @@
-require 'iconv'
-
 def removeSpacialChars(text)
-	ascii = "acelnoszzACELNOSZZ"
-    cep = "\271\346\352\263\361\363\234\277\237\245\306\312\243\321\323\214\257\217"
-	s = Iconv.new("cp1250", "UTF-8").iconv(text)
-	s.tr!(cep, ascii)
-	return (s.length==0) ? self : s   	
+    text = self.downcase
+    text
+    text.gsub!(/[âäàãáäå�?ăąǎǟǡǻ�?ȃȧẵặ]/,'a')
+    text.gsub!(/[ëêéèẽēĕėẻȅȇẹȩęḙḛ�?ếễểḕḗệ�?]/,'e')
+    text.gsub!(/[�?iìíîĩīĭïỉ�?ịįȉȋḭɨḯ]/,'i')
+    text.gsub!(/[òóôõ�?�?ȯö�?őǒ�?�?ơǫ�?ɵøồốỗổȱȫȭ�?�?ṑṓ�?ớỡởợǭộǿ]/,'o')
+    text.gsub!(/[ùúûũūŭüủůűǔȕȗưụṳųṷṵṹṻǖǜǘǖǚừứữửự]/,'u')
+    text.gsub!(/[ỳýŷỹȳ�?ÿỷẙƴỵ]/,'y')
+    text.gsub!(/[ñǹń]/,'n')
+    text.gsub!(/[çć]/,'c')
+    text.gsub!(/[ß]/,'ss')
+    text.gsub!(/[œ]/,'oe')
+    text.gsub!(/[ĳ]/,'ij')
+    text.gsub!(/[�?ł]/,'l')
+    text.gsub!(/[ś]/,'s')
+    text.gsub!(/[źż]/,'z')
+    text.gsub!(/[^a-zA-Z 0-9]/, "")
+    text.gsub!(/\s/,' ')
+    text.gsub!(/\-+$/,'')
+    text.gsub!(/^\-+/,'')
+    text	
 end
