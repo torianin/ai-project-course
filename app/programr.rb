@@ -9,7 +9,7 @@ class Alice
 
 	def askAlice(question)
 		removeSpacialChars(question)
-		reaction = @robot.get_reaction(question)
+		reaction = @robot.get_reaction(question) + " " + question
 	end
 end
 
