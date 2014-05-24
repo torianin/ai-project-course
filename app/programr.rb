@@ -1,4 +1,4 @@
-require './utilities'
+require './app/utilities'
 require 'programr'
 
 class Alice
