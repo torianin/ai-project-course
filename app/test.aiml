@@ -9,7 +9,7 @@
 <!-- as adopted by the ALICE A.I. Foundation.  -->
 <!-- Last modified 10/5/2011 -->
 <!-- -->
-<category><pattern>*/pattern>
+<category><pattern>*</pattern>
 <template>Nie kocham Cię.</template>
 </category>
 <category><pattern>MOGE CIE POMIZIAC PO BRZUSZKU</pattern>
