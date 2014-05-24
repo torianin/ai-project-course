@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    iconv (1.0.4)
     pg (0.17.1)
     programr (0.0.1)
     rack (1.5.2)
@@ -17,7 +16,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  iconv
   pg
   programr
   sinatra (= 1.4.5)
