@@ -13,7 +13,7 @@ post '/ask' do
 	query = params[:query]
 	addQuery(query)
 	if params[:query] == 'Cześć Robcio'
-		return "[[guib;FF0000]Kocham Cię]"
+		return "[[b;red;black]Kocham Cię]"
 	else
 		return "Nie kocham Cię"
 	end
