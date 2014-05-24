@@ -12,3 +12,4 @@ class Alice
 end
 
 $alice = Alice.new()
+$alice.createAlice
