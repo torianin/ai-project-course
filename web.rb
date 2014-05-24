@@ -6,10 +6,6 @@ get '/' do
 	erb :index
 end
 
-get '/create' do
-	createAlice
-end
-
 get '/reset' do
 	createModel
 end
