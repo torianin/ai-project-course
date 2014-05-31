@@ -10,6 +10,7 @@
     <link href="/css/jquery.terminal.css" rel="stylesheet"/>
     <style type="text/css">
     input{
+        padding: 10px;
         font-family: FreeMono, monospace;
         color: #FFF;
         background-color: #000;
@@ -22,16 +23,12 @@
     </style>
     <script>
     jQuery(document).ready(function($) {
-        $("#input").focus();
-        $("#input").setSelectionRange && $("#input").setSelectionRange(0, 0);
         $("#input").keyup(function (e) {
             var term = $('#term').terminal();
             if (e.keyCode == 13) {
                 var input = $(this).val();
-                term.exec(input,false);
-                $("#input").val('');
-                $("#input").focus();
-                $("#input").setSelectionRange && $("#input").setSelectionRange(0, 0);
+                term.exec(input,true);
+                $("#input").val('>');
             }
         });
         $('#term').terminal(function(command, term) {
@@ -45,7 +42,7 @@
         }, {
         greetings: '[[b;red;black] _______         _             _       \r\n|__   __|       (_)           (_)      \r\n   | | ___  _ __ _  __ _ _ __  _ _ __  \r\n   | |\/ _ \\| \'__| |\/ _` | \'_ \\| | \'_ \\ \r\n   | | (_) | |  | | (_| | | | | | | | |\r\n   |_|\\___\/|_|  |_|\\__,_|_| |_|_|_| |_|]\r\n\t\t\t\t\t[[;red;black]  robert-i.com 2014]\r\n----------------------------------------\r\nCreated by Robert Ignasiak \r\n[[;lightblue;black]Facebook: http://facebook.com/torianin\r\nLinkedin: http://linkedin.com/in/torianin\r\nInstagram: http://instagram.com/torianin]\r\n----------------------------------------\r\n\r\nWitam serdecznie i czekam na pytania.',
         name: 'torianin',
-        height: 200,
+        height: 400,
         width: 450,
         prompt: ''});
     });
@@ -53,5 +50,5 @@
   </head>
 <body>
 <div id="term"></div>
-<input id="input" type="text" value="" autofocus/>
+<input id="input" type="text" value="Kliknij tutaj, aby wpisać zapytanie na urządzeniu mobilnym."/>
 </body>
