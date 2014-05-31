@@ -1,9 +1,9 @@
 require 'sinatra'
 require './app/model'
 require './app/programr'
+require 'pusher'
 
 set :protection, :except => :frame_options
-enable :sessions
 
 get '/' do
 	erb :index
@@ -15,13 +15,11 @@ end
 
 post '/ask' do
 	query = params[:query]
-	puts query
-	#addQuery(query)
-	x = STDIN.gets.chomp()
-	return x
-	#if params[:query] == 'Cześć Robcio'
-	#	return "[[b;red;black]Kocham Cię]"
-	#else
-	#	return $alice.askAlice(query)
-	#end
+	addQuery(query)
+	Pusher['sended-message'].trigger('sended-message', {:message => "#{query}"})
+	if params[:query] == 'Cześć Robcio'
+		return "[[b;red;black]Kocham Cię]"
+	else
+		return $alice.askAlice(query)
+	end
 end
