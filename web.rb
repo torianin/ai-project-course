@@ -14,10 +14,13 @@ end
 
 post '/ask' do
 	query = params[:query]
-	addQuery(query)
-	if params[:query] == 'Cześć Robcio'
-		return "[[b;red;black]Kocham Cię]"
-	else
-		return $alice.askAlice(query)
-	end
+	puts query
+	#addQuery(query)
+	x = STDIN.gets.chomp()
+	return x
+	#if params[:query] == 'Cześć Robcio'
+	#	return "[[b;red;black]Kocham Cię]"
+	#else
+	#	return $alice.askAlice(query)
+	#end
 end
