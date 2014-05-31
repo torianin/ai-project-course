@@ -2,7 +2,7 @@ require 'sinatra'
 require './app/model'
 require './app/programr'
 
-set :protection, :except => :frame_options
+disable :protection
 
 get '/' do
 	erb :index
