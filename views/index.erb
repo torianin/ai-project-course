@@ -8,6 +8,17 @@
     <script src="/js/jquery.mousewheel-min.js"></script>
     <script src="/js/jquery.terminal-min.js"></script>
     <link href="/css/jquery.terminal.css" rel="stylesheet"/>
+    <style type="text/css">
+    input{
+        font-family: FreeMono, monospace;
+        color: #FFF;
+        background-color: #000;
+        font-size: 13px;
+        line-height: 14px;
+        border: 0px solid;
+        outline: 0;
+    }
+    </style>
     <script>
     jQuery(document).ready(function($) {
         $("#input").keyup(function (e) {
@@ -15,6 +26,8 @@
             if (e.keyCode == 13) {
                 var input = $(this).val();
                 term.exec(input,false);
+                $("#input").val('');
+                $("#input").focus();
             }
         });
         $('#term').terminal(function(command, term) {
@@ -36,5 +49,5 @@
   </head>
 <body>
 <div id="term"></div>
-<input id="input" type="text" value=""/>
+<input id="input" type="text" value="" autofocus/>
 </body>
