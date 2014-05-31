@@ -4,6 +4,7 @@ require './app/programr'
 require 'pusher'
 
 set :protection, :except => :frame_options
+Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com/apps/76635"
 
 get '/' do
 	erb :index
