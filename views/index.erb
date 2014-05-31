@@ -12,8 +12,6 @@
     jQuery(document).ready(function($) {
         if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
             $("#input").hide();
-            var term = $('#term').terminal();
-            term.resize(300,500);
         }
         $("#input").focusout(function (){
             $("#input").val('Kliknij tutaj, aby wpisać zapytanie.');
