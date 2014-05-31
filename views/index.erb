@@ -23,6 +23,9 @@
     </style>
     <script>
     jQuery(document).ready(function($) {
+        $("#term").click(function (){
+            $("#term").blur()
+        });
         $("#input").click(function (){
             $("#input").val('');
         });
@@ -30,8 +33,9 @@
             var term = $('#term').terminal();
             if (e.keyCode == 13) {
                 var input = $(this).val();
-                term.exec(input,true);
+                term.exec(input,false);
                 $("#input").val('Kliknij tutaj, aby wpisać zapytanie na urządzeniu mobilnym.');
+                $("#input").blur()
             }
         });
         $('#term').terminal(function(command, term) {
