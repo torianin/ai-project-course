@@ -12,9 +12,11 @@
     jQuery(document).ready(function($) {
         if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
             $("#input").hide();
+            var term = $('#term').terminal();
+            term.resize(300,500);
         }
         $("#input").focusout(function (){
-            $("#input").val('Kliknij tutaj, aby wpisać zapytanie na urządzeniu mobilnym.');
+            $("#input").val('Kliknij tutaj, aby wpisać zapytanie.');
         });
         $("#input").click(function (){
             $("#input").val('');
@@ -24,7 +26,7 @@
             if (e.keyCode == 13) {
                 var input = $(this).val();
                 term.exec(input,false);
-                $("#input").val('Kliknij tutaj, aby wpisać zapytanie na urządzeniu mobilnym.');
+                $("#input").val('Kliknij tutaj, aby wpisać zapytanie.');
                 $("#input").blur()
             }
         });
@@ -47,5 +49,5 @@
   </head>
 <body>
 <div id="term"></div>
-<input id="input" type="text" value="Kliknij tutaj, aby wpisać zapytanie na urządzeniu mobilnym." />
+<input id="input" type="text" value="Kliknij tutaj, aby wpisać zapytanie." />
 </body>
