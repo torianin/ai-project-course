@@ -8,23 +8,10 @@
     <script src="/js/jquery.mousewheel-min.js"></script>
     <script src="/js/jquery.terminal-min.js"></script>
     <link href="/css/jquery.terminal.css" rel="stylesheet"/>
-    <style type="text/css">
-    input{
-        padding: 10px;
-        font-family: FreeMono, monospace;
-        color: #FFF;
-        background-color: #000;
-        font-size: 13px;
-        line-height: 14px;
-        width:600px;
-        border: 0px solid;
-        outline: 0;
-    }
-    </style>
     <script>
     jQuery(document).ready(function($) {
-        $("#term").click(function (){
-            $("#term").blur()
+        $("#input").focusout(function (){
+            $("#input").val('Kliknij tutaj, aby wpisać zapytanie na urządzeniu mobilnym.');
         });
         $("#input").click(function (){
             $("#input").val('');
@@ -57,5 +44,5 @@
   </head>
 <body>
 <div id="term"></div>
-<input id="input" type="text" value="Kliknij tutaj, aby wpisać zapytanie na urządzeniu mobilnym."/>
+<input id="input" type="text" value="Kliknij tutaj, aby wpisać zapytanie na urządzeniu mobilnym." />
 </body>
