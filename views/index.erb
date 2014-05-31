@@ -15,7 +15,7 @@
         var channel = pusher.subscribe('test_channel');
         channel.bind('my_event', function(data) {
             var term = $('#term').terminal();
-            term.insert(input);
+            term.insert(data);
         });
 
         if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
