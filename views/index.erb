@@ -15,6 +15,7 @@
         background-color: #000;
         font-size: 13px;
         line-height: 14px;
+        width:450px;
         border: 0px solid;
         outline: 0;
     }
@@ -22,7 +23,7 @@
     <script>
     jQuery(document).ready(function($) {
         $("#input").keyup(function (e) {
-            var term = $('#term').terminal();
+            var term = $('body').terminal();
             if (e.keyCode == 13) {
                 var input = $(this).val();
                 term.exec(input,false);
@@ -30,7 +31,7 @@
                 $("#input").focus();
             }
         });
-        $('#term').terminal(function(command, term) {
+        $('body').terminal(function(command, term) {
             $.post("ask",
             {
                 query:command,
