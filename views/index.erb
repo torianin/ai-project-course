@@ -9,15 +9,15 @@
     <script src="/js/jquery.terminal-min.js"></script>
     <link href="/css/jquery.terminal.css" rel="stylesheet"/>
     <script>
-    $(".input").keyup(function (e) {
-        var term = $('body').terminal();
-        term.insert(e);
-        if (e.keyCode == 13) {
-            term.exec('Pies',false);
-        }
-    });
     jQuery(document).ready(function($) {
-        $('body').terminal(function(command, term) {
+        $("#input").keyup(function (e) {
+            var term = $('#term').terminal();
+            if (e.keyCode == 13) {
+                var input = $(this).val();
+                term.exec(input,false);
+            }
+        });
+        $('#term').terminal(function(command, term) {
             $.post("ask",
             {
                 query:command,
@@ -35,5 +35,6 @@
     </script>
   </head>
 <body>
-<input class="input" type="text"> </input>
+<div id="term"></div>
+<input id="input" type="text" value=""/>
 </body>
