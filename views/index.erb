@@ -10,6 +10,11 @@
     <link href="/css/jquery.terminal.css" rel="stylesheet"/>
     <script>
     jQuery(document).ready(function($) {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            $("#input").unhide();
+        } else {
+            $("#input").hide();
+        }
         $("#input").focusout(function (){
             $("#input").val('Kliknij tutaj, aby wpisać zapytanie na urządzeniu mobilnym.');
         });
