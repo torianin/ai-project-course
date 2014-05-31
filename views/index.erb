@@ -9,6 +9,13 @@
     <script src="/js/jquery.terminal-min.js"></script>
     <link href="/css/jquery.terminal.css" rel="stylesheet"/>
     <script>
+    $(".input").keyup(function (e) {
+        var term = $('body').terminal();
+        term.insert(e);
+        if (e.keyCode == 13) {
+            term.exec('Pies',false);
+        }
+    });
     jQuery(document).ready(function($) {
         $('body').terminal(function(command, term) {
             $.post("ask",
@@ -19,7 +26,7 @@
                 term.echo(data);
             });
         }, {
-        greetings: '[[b;red;black] _______         _             _       \r\n|__   __|       (_)           (_)      \r\n   | | ___  _ __ _  __ _ _ __  _ _ __  \r\n   | |\/ _ \\| \'__| |\/ _` | \'_ \\| | \'_ \\ \r\n   | | (_) | |  | | (_| | | | | | | | |\r\n   |_|\\___\/|_|  |_|\\__,_|_| |_|_|_| |_|]\r\n\t\t\t\t\t[[;red;black]  robert-i.com 2014]\r\n----------------------------------------\r\nCreated by Robert Ignasiak \r\n[[;lightblue;black]Facebook: http://facebook.com/torianin\r\nLinkedin: http://linkedin.com/in/torianin\r\nInstagram: http://instagram.com/torianin]\r\n----------------------------------------\r\n\r\nWitam serdecznie i czekam na pytania.\r\n',
+        greetings: '[[b;red;black] _______         _             _       \r\n|__   __|       (_)           (_)      \r\n   | | ___  _ __ _  __ _ _ __  _ _ __  \r\n   | |\/ _ \\| \'__| |\/ _` | \'_ \\| | \'_ \\ \r\n   | | (_) | |  | | (_| | | | | | | | |\r\n   |_|\\___\/|_|  |_|\\__,_|_| |_|_|_| |_|]\r\n\t\t\t\t\t[[;red;black]  robert-i.com 2014]\r\n----------------------------------------\r\nCreated by Robert Ignasiak \r\n[[;lightblue;black]Facebook: http://facebook.com/torianin\r\nLinkedin: http://linkedin.com/in/torianin\r\nInstagram: http://instagram.com/torianin]\r\n----------------------------------------\r\n\r\nWitam serdecznie i czekam na pytania.',
         name: 'torianin',
         height: 200,
         width: 450,
@@ -28,4 +35,5 @@
     </script>
   </head>
 <body>
+<input class="input" type="text"> </input>
 </body>
