@@ -1,3 +1,6 @@
 require './web'
-$stdout.sync = true
-run Sinatra::Application
+
+run Rack::URLMap.new({
+  "/" => Public,
+  "/reset" => Protected
+})

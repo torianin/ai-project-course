@@ -2,6 +2,7 @@ require 'pusher'
 require 'pusher-client'
 require 'pp'
 require 'pusher'
+require 'json'
 
 Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com/apps/76635"
 
@@ -15,7 +16,8 @@ socket = PusherClient::Socket.new(APP_KEY)
 socket.subscribe('sended-message')
 
 socket['sended-message'].bind('sended-message') do |data|
-  puts data
+  message_hash = JSON.parse("#{data}")
+  puts message_hash["message"]
 end
 
 socket.connect(true) # Connect asynchronously
