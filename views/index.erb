@@ -22,16 +22,19 @@
     </style>
     <script>
     jQuery(document).ready(function($) {
+        $("#input").focus();
+        $("#input").setSelectionRange && $("#input").setSelectionRange(0, 0);
         $("#input").keyup(function (e) {
-            var term = $('body').terminal();
+            var term = $('#term').terminal();
             if (e.keyCode == 13) {
                 var input = $(this).val();
                 term.exec(input,false);
                 $("#input").val('');
                 $("#input").focus();
+                $("#input").setSelectionRange && $("#input").setSelectionRange(0, 0);
             }
         });
-        $('body').terminal(function(command, term) {
+        $('#term').terminal(function(command, term) {
             $.post("ask",
             {
                 query:command,
