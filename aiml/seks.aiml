@@ -9,9 +9,9 @@
 <!-- as adopted by the ALICE A.I. Foundation.  -->
 <!-- Last modified 10/5/2011 -->
 <!-- -->
-<category><pattern>SEX</pattern>
-<that>WHAT WERE WE TALKING ABOUT AGAIN</that>
-<template>Humans are very concerned with <set name="it"><set name="topic">sex</set></set>.</template>
+<category><pattern>SEKS</pattern>
+<that>O CZYM MYSMY ROZMAWIALI</that>
+<template>Wydaje mi się, że tematem naszych rozmów był <set name="it"><set name="topic">seks</set></set>.</template>
 </category>
 <category><pattern>UPRAWIAJMY SEKS</pattern>
 <template>Przykro mi nie uprawiam przypadkowego seksu z nieznajomymi :p</template>
