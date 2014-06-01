@@ -10,10 +10,10 @@
 <!-- Last modified 10/5/2011 -->
 <!-- -->
 
-<category><pattern>HEJ _</pattern>
+<category><pattern>HEJ *</pattern>
 <template><srai>HEJ</srai></template>
 </category>
-<category><pattern>_ HEJ</pattern>
+<category><pattern>* HEJ</pattern>
 <template><srai>HEJ</srai></template>
 </category>
 <category><pattern>HEJ</pattern>
