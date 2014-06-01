@@ -7,6 +7,14 @@ set :protection, :except => :frame_options
 Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com/apps/76635"
 
 class Protected < Sinatra::Base
+	
+	def createModel
+		p = PostgresConnector.new()
+		p.connect
+		p.createTables
+		p.disconnect
+	end
+
   use Rack::Auth::Basic, "Protected Area" do |username, password|
     username == 'admin' && password == 'test'
   end
