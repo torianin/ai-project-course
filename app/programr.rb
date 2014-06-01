@@ -4,7 +4,7 @@ require 'programr'
 class Alice
 	def createAlice
 		@robot = ProgramR::Facade.new
-		@robot.learn(['./app/test.aiml'])
+		@robot.learn(['./aiml/test.aiml','./aiml/profil_clienta.aiml','./aiml/seks.aiml'])
 	end
 
 	def askAlice(question)
