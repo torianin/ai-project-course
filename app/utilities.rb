@@ -21,6 +21,6 @@ def removeSpacialChars(text)
     text
 end
 
-File.open('slownik.dat') do |file|
+File.open('./app/slownik.dat') do |file|
     $pociete = Marshal.load(file)
 end
