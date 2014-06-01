@@ -2,6 +2,7 @@ slowa = File.read("./odm.txt")
 pociete = slowa.split(/[^\w-]+/)
 puts pociete.include?("kot")
 puts pociete.include?("Konqueror")
+
 def removeSpacialChars(text)
     text
     text.gsub!(/[Ąâàãáäåăąǎǟǡǻȃȧẵặ]/,'a')
@@ -24,6 +25,7 @@ def removeSpacialChars(text)
     text.gsub!(/\-/,' ')
     text
 end
+
 pociete.each do |l| 
 	l = removeSpacialChars(l) 
 	puts l

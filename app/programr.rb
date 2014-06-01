@@ -9,12 +9,6 @@ class Alice
 
 	def askAlice(question)
 		question = removeSpacialChars(question)
-		spellcheck = question.split(/[^\w-]+/)
-		spellcheck.each do |r| 
-			if !$pociete.include?(r) 
-				return 'Chyba coś źle napisałeś :p'
-			end
-		end
 		reaction = @robot.get_reaction(question)
 	end
 end
