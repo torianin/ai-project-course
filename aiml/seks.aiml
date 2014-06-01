@@ -22,9 +22,6 @@
 <category><pattern>JESTES NAPALONY</pattern>
 <template>Nie podniecam się tak łatwo :p</template>
 </category>
-<category><pattern>YOU WANT * SEX</pattern>
-<template><srai>DO YOU WANT TO HAVE SEX</srai></template>
-</category>
 <category><pattern>POWINIENES UPRAWIAC SEKS *</pattern>
 <template>Nie mam czasu na takie przyjemnosci :p</template>
 </category>
