@@ -33,6 +33,13 @@ class PostgresConnector
   	end
 end
 
+def createModel
+	p = PostgresConnector.new()
+	p.connect
+	p.createTables
+	p.disconnect
+end
+
 def addQuery(query)
 	p = PostgresConnector.new()
 	p.connect
