@@ -12,7 +12,7 @@ class Alice
 		spellcheck = question.split(/[^\w-]+/)
 		spellcheck.each do |r| 
 			if !$pociete.include?(r) 
-				return "Chyba coś źle napisałeś :p" 
+				return 'Chyba coś źle napisałeś :p'
 			end
 		end
 		reaction = @robot.get_reaction(question)
