@@ -10,14 +10,12 @@
 <!-- Last modified 10/5/2011 -->
 <!-- -->
 
-<category>
-  <pattern>JAK MASZ NA IMIĘ</pattern>
-  <template>MAM NA IMIĘ <bot name="name"/>.</template>
+<category><pattern>HEJ _</pattern>
+<template><srai>HEJ</srai></template>
 </category>
-<category>
-  <pattern>JAK SIĘ NAZYWASZ</pattern>
-  <template>
-    <srai>JAK MASZ NA IMIĘ</srai>
-  </template>
+<category><pattern>_ HEJ</pattern>
+<template><srai>HEJ</srai></template>
 </category>
-</aiml>
+<category><pattern>HEJ</pattern>
+<template>No hej :p</template>
+</category>
