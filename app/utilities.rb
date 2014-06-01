@@ -20,3 +20,7 @@ def removeSpacialChars(text)
     text.gsub!(/\-/,' ')
     text
 end
+
+File.open('slownik.dat') do |file|
+    $pociete = Marshal.load(file)
+end
