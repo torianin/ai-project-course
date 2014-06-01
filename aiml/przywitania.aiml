@@ -9,17 +9,15 @@
 <!-- as adopted by the ALICE A.I. Foundation.  -->
 <!-- Last modified 10/5/2011 -->
 <!-- -->
+
 <category>
-<pattern>*</pattern>
-<template>
-<random>
-<li>Nie kumam :p</li>
-<li>Nie mam pojecia jak Ci odpowiedziec :p</li>
-<li>Mozemy zmienić temat :p</li>
-<li>Co robisz jutro o 18 :p</li>
-</random>
-</template>
-<category><pattern>MOGE CIE POMIZIAC PO BRZUSZKU</pattern>
-<template>Pewnie.</template>
+  <pattern>JAK MASZ NA IMIĘ</pattern>
+  <template>MAM NA IMIĘ <bot name="name"/>.</template>
+</category>
+<category>
+  <pattern>JAK SIĘ NAZYWASZ</pattern>
+  <template>
+    <srai>JAK MASZ NA IMIĘ</srai>
+  </template>
 </category>
 </aiml>
