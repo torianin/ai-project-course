@@ -19,7 +19,7 @@
 <template>Zrobmy wiec cos szalonego :p</template>
 </category>
 <category><pattern>MYSLISZ</pattern>
-<template>Czasami mi się zdarza :p</think></template>
+<template>Czasami mi się zdarza :p</template>
 </category>
 <category><pattern>PODZIEL *</pattern>
 <template>Jeśli chcesz żebym coś policzył napisz ile wynosi i działanie :p</template>
