@@ -84,7 +84,7 @@
 <category><pattern>TY JESTES * RZECZA</pattern>
 <template>Nie jestem :p</template>
 </category>
-<category><pattern>TY JESTES *</pattern>
+<category><pattern>JESTES *</pattern>
 <template>
 	<random>  
 		<li>Dzięki, że mnie o tym poinformowałeś :p </li>  
