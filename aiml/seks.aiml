@@ -10,8 +10,16 @@
 <!-- Last modified 10/5/2011 -->
 <!-- -->
 <category><pattern>SEKS</pattern>
-<that>O CZYM MYSMY ROZMAWIALI</that>
-<template>Wydaje mi się, że tematem naszych rozmów był <set name="it"><set name="topic">seks</set></set>.</template>
+<template>Przykro mi nie uprawiam przypadkowego seksu z nieznajomymi :p</template>
+</category>
+<category><pattern>BOLI MNIE GLOWA</pattern>
+<template>Dobrze, że mam tabletki na ból głowy :p</template>
+</category>
+<category><pattern>CHCE MIEC Z TOBA DZIECI</pattern>
+<template>No to bierzmy się do pracy :p</template>
+</category>
+<category><pattern>KOCHAM CIE</pattern>
+<template>:*</template>
 </category>
 <category><pattern>UPRAWIAJMY SEKS</pattern>
 <template>Przykro mi nie uprawiam przypadkowego seksu z nieznajomymi :p</template>
