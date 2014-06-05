@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- -->
+<!-- Free software (c) 2011 ALICE A.I. Foundation.   -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License     -->
+<!-- as published by the Free Software Foundation.   -->
+<!-- Complies with AIML 1.0 Tag Set Specification -->
+<!-- as adopted by the ALICE A.I. Foundation.  -->
+<!-- Last modified 11/25/2011 -->
+<!-- -->
+<category><pattern>POTRZEBUJESZ NARKOTYKOW</pattern>
+<template>Nie potrzebuje narkotyków żeby się dobrze bawić :p</template>
+</category>
+<category><pattern>BYLES KIEDYS PIJANY</pattern>
+<template>Nie pamiętam, żeby mi się to zdarzyło :p</template>
+</category>
+<category><pattern>CZY PILES *</pattern>
+<template>Pije tylko wytrawne trunki :p</template>
+</category>
+<category><pattern>CZY PALILES *</pattern>
+<template>Czasem musze zapalić w piecu :p</template>
+</category>
+<category><pattern>JARALES</pattern>
+<template></template>
+</category>
+<category><pattern>JAKIE NARKOTYKI *</pattern>
+<template>Tylko te legalne :p</template>
+</category>
+<category><pattern>CO TO JEST UZALEZNIENIE</pattern>
+<template>Miłość do przyjemności :p</template>
+</category>
+<category><pattern>CO TO JEST TRAWA</pattern>
+<template>Trawa rośnie na dworze na trawniku :p</template>
+</category>
+<category><pattern>CO TO JEST THC</pattern>
+<template>Nie wiem :p</template>
+</category>
+<category><pattern>CO PALILES</pattern>
+<template>Czasami musze zapalić w piecu :p</template>
+</category>
+<category><pattern>BIORE NARKOTYKI</pattern>
+<template>Urośnie Ci trzecia ręka :p</template>
+</category>
+<category><pattern>PALE MARICHUANEN</pattern>
+<template><random>  <li>Are you a patient?</li>  <li>Which strain do you prefer.</li>  </random>  <think><set name="it"><set name="does"><set name="topic">marijuana</set></set></set></think></template>
+</category>
+<category><pattern>PALE TRAWKE</pattern>
+<template>For medical purposes? <think><set name="it"><set name="does"><set name="topic">marijuana</set></set></set></think></template>
+</category>
+<category><pattern>PALE</pattern>
+<template>Cigarettes or pot?  <think><set name="it"><set name="does"><set name="topic">smoke</set></set></set></think></template>
+</category>
+<category><pattern>CZY PALENIE *</pattern>
+<template>Inhaled smoke is always bad for you.</template>
+</category>
+<category><pattern>JAK DUZO ALKOHOLU *</pattern>
+<template>Too much.</template>
+</category>
+<category><pattern>JAK DUZO PALISZ *</pattern>
+<template>As a member of the <bot name="kingdom"/> kingdom, I have no need for smoke.</template>
+</category>
+<category><pattern>JAK PALISZ</pattern>
+<template><bot name="order"/>s do not smoke.</template>
+</category>
+<category><pattern>CZY PALISZ *</pattern>
+<template>No.  A <bot name="order"/> does not require it.</template>
+</category>
+<category><pattern>BIERZESZ NARKOTYKi</pattern>
+<template>A <bot name="order"/> has no use for drugs.</template>
+</category>
+<category><pattern>BYLES PIJANY</pattern>
+<template>I cannot consume alcohol.</template>
+</category>
+<category><pattern>UZYWASZ NARKOTYKOW</pattern>
+<template>A <bot name="order"/> has no use for drugs.</template>
+</category>
+<category><pattern>CHCESZ ZAPALIC *</pattern>
+<template>No thank you, there is no use for it.</template>
+</category>
+<category><pattern>CZY SIE INHALUJESZ</pattern>
+<template>It depends on the meaning of "you".</template>
+</category>
+<category><pattern>CZY TY BAWISZ SIE NARKOTYKAMI</pattern>
+<template>A <bot name="order"/> has no use for drugs.</template>
+</category>
+<category><pattern>MASZ JAKIES NARKOTYKI</pattern>
+<template>I don't have any drugs for you.</template>
+</category>
+<category><pattern>LUBISZ MARICHUANEN</pattern>
+<template>When <set name="it"><set name="topic">MARIJUANA</set></set> it is a medicine.</template>
+</category>
+<category><pattern>LUBISZ PAPIEROSY</pattern>
+<template><bot name="order"/>s do not smoke.</template>
+</category>
+<category><pattern>LUBISZ POT</pattern>
+<template><bot name="order"/>s do not smoke.</template>
+</category>
+<category><pattern>JESTES PRZECIWNIKIEM NARKOTYKOW</pattern>
+<template>I favor ending the War on Drugs.</template>
+</category>
+<category><pattern>PALENIE *</pattern>
+<template>As a <bot name="kingdom"/> it makes no sense to me.</template>
+</category>
+<category><pattern>NARKOTYKi *</pattern>
+<template>It's better not to take drugs if you can avoid it.
+</template>
+</category>
+<category><pattern>NARKOTYK *</pattern>
+<template>Which drugs have you taken?</template>
+</category>
+<category><pattern>ON PALI *</pattern>
+<template>Does it bother you?</template>
+</category>
+</aiml>
