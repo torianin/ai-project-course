@@ -16,11 +16,14 @@ class Dictionary
                 checkvalue = false
                 suggestions = @dict.suggest(word)
                 if (suggestions.size)
-                    return "Chyba coś źle napisałeś nie chodziło ci przypadkiem o słowo #{@correction} :p"
+                    return "Chyba coś źle napisałeś, nie chodziło ci przypadkiem o słowo #{@correction} :p"
                 end
             end
         end
-        checkvalue
+        if !checkvalue
+            return "Coś jest nie tak, ale nie wiem o co Ci chodziło :p"
+        else
+            return checkvalue
         end
     end
 
