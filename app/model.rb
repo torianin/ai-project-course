@@ -11,6 +11,8 @@ class PostgresConnector
 	    host = db_parts[5]
 	    db = db_parts[7]
 	    @conn = PGconn.open(:host =>  host, :dbname => db, :user=> username, :password=> password)
+		@conn.prepare("insert_query", "insert into query (query_text) values ($1)")
+
 	end
 
 	def createTables
@@ -21,10 +23,6 @@ class PostgresConnector
 			date timestamp without time zone DEFAULT CURRENT_TIMESTAMP
 		);
 		");
-	end
-
-	def prepareInsertUserStatement
-		@conn.prepare("insert_query", "insert into query (query_text) values ($1)")
 	end
 
 	def addQuery(query)
@@ -43,6 +41,5 @@ end
 
 def addQuery(query)
 	p = PostgresConnector.instance
-	p.prepareInsertUserStatement
 	p.addQuery(query)
 end
