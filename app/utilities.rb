@@ -1,3 +1,4 @@
+=begin
 require 'ispell'
 
 speller = Ispell.new('ispell', './app/polish')
@@ -19,6 +20,7 @@ results.each do |res|
 end
 
 speller.destroy!
+=end
 
 def removeSpacialChars(text)
     text
