@@ -5,7 +5,7 @@ require "Hunspell" # inject Hunspell class to Ruby namespace
 # instantiate Hunspell with Hungarian affix and dictionary files
 #
 
-sp = Hunspell.new("pl_PL.aff", "pl_PL.dic") 
+sp = Hunspell.new("./app/pl_PL.aff", "./app/pl_PL.dic") 
 
 # spell check Hungarian word 'ablak' (window) => true
 #
