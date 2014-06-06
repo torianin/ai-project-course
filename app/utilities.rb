@@ -1,23 +1,20 @@
-require "rubygems" # import gem package manager
-gem "hunspell"     # load Hunspell module
-require "Hunspell" # inject Hunspell class to Ruby namespace
+require 'hunspell-ffi'
 
-# instantiate Hunspell with Hungarian affix and dictionary files
-#
+# directly specify dictionaries (legacy)
+dict = Hunspell.new("./app/pl_PL.aff", "./app/pl_PL.dic")
 
-sp = Hunspell.new("./app/pl_PL.aff", "./app/pl_PL.dic") 
+dict.spell("walked")        # => true  same as #check, #check?
+dict.spell("woked")         # => false
+dict.check?("woked")        # => false
+dict.suggest("woked")       # => ["woke", "worked", "waked", "woken", ...]
+dict.suggest("qwss43easd")  # => []
 
-# spell check Hungarian word 'ablak' (window) => true
-#
-puts "Is 'ablak' correct? #{sp.spellcheck('ablak')}"
+dict.stem("Baumkuchen")     # => ["Baumkuchen"]
+dict.analyze("Baumkuchen")  # => [" st:Baumkuchen"]
 
-# get suggestions for mispelled word 'paprika'
-#   => ["kaprica", "patrica", "paprika", "papcica",
-#       "papráca", "papruca", "paprima", "paprikáz",
-#       "paprikása", "paprikás", "Papradnó"
-#      ]
-#
-puts "Suggestions for 'paprica': " + sp.suggest("paprica").inspect
+# Modify the run-time dictionary:
+dict.add("Geburtstagskuchen")
+dict.remove("Fichte")
 
 def removeSpacialChars(text)
     text
