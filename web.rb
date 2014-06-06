@@ -32,6 +32,10 @@ class Public < Sinatra::Base
 		query = params[:query]
 		addQuery(query)
 		Pusher['sended-message'].trigger('sended-message', {:message => "#{query}"})
+		d = Dictionary.instance
+		checkedValue = d.checkWords(query) 
+		if checkedValue != true
+			return checkedValue
 		if params[:query] == 'Cześć Robcio'
 			return "[[b;red;black]Kocham Cię]"
 		else

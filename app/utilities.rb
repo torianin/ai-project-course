@@ -1,19 +1,40 @@
 require 'hunspell-ffi'
+require 'singleton'
 
-dict = Hunspell.new("./app/pl_PL.aff", "./app/pl_PL.dic")
+class Dictionary
+  include Singleton
 
-dict.spell("walked")        # => true  same as #check, #check?
-dict.spell("woked")         # => false
-dict.check?("woked")        # => false
-dict.suggest("woked")       # => ["woke", "worked", "waked", "woken", ...]
-dict.suggest("qwss43easd")  # => []
+    def initialize()
+        @dict = Hunspell.new("./app/pl_PL.aff", "./app/pl_PL.dic")
+    end
 
-dict.stem("Baumkuchen")     # => ["Baumkuchen"]
-dict.analyze("Baumkuchen")  # => [" st:Baumkuchen"]
+    def checkWords(query)
+        checkvalue = true
+        checklist = query.delete('^aąbcćdeęfghijklłmnńoóprsśtuwyzźżAĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ').split
+        checklist.each do |word| 
+            if @dict.check(word) == false
+                checkvalue = false
+                suggestions = @dict.suggest(word)
+                if (suggestions.size)
+                    @correction = suggestions.first
+                end
+            end
+        end
+        if checkvalue
+            return checkvalue
+        else 
+            return "Chyba coś źle napisałeś nie chodziło ci przypadkiem o słowo #{@correction} :p"
+        end
+    end
 
-# Modify the run-time dictionary:
-dict.add("Geburtstagskuchen")
-dict.remove("Fichte")
+    def addWord()
+        dict.add("Pieseł")
+    end
+
+    def removeWord()
+        dict.remove("Koteł")
+    end
+end
 
 def removeSpacialChars(text)
     text
