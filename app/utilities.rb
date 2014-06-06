@@ -1,26 +1,23 @@
-=begin
-require 'ispell'
+require "rubygems" # import gem package manager
+gem "hunspell"     # load Hunspell module
+require "Hunspell" # inject Hunspell class to Ruby namespace
 
-speller = Ispell.new('ispell', './app/polish')
+# instantiate Hunspell with Hungarian affix and dictionary files
+#
 
-speller.suggest('mój') # => 'mantissa'
-speller.suggest('muj')    # => 'cake'
+sp = Hunspell.new("pl_PL.aff", "pl_PL.dic") 
 
-results = speller.spellcheck('hello wonderfull wordl nice 42 trouting')
-puts "Misspelled words: #{results.collect {|w| w.original}.join(',')}"
-results.each do |res|
-  case res.type
-    when :miss, :guess
-      puts "#{res.original} => #{res.guesses.join(',')}"
-    when :none
-      puts "#{res.original} wasn't found"
-    else
-      puts "#{res.type.to_s} type of result"
-  end
-end
+# spell check Hungarian word 'ablak' (window) => true
+#
+puts "Is 'ablak' correct? #{sp.spellcheck('ablak')}"
 
-speller.destroy!
-=end
+# get suggestions for mispelled word 'paprika'
+#   => ["kaprica", "patrica", "paprika", "papcica",
+#       "papráca", "papruca", "paprima", "paprikáz",
+#       "paprikása", "paprikás", "Papradnó"
+#      ]
+#
+puts "Suggestions for 'paprica': " + sp.suggest("paprica").inspect
 
 def removeSpacialChars(text)
     text
