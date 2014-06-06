@@ -1,2 +1,3 @@
 git://github.com/heroku/heroku-buildpack-ruby.git
 git://github.com/ryandotsmith/null-buildpack.git
+git://github.com/goodwill/heroku-buildpack-ruby-hunspell.git
