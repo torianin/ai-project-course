@@ -31,7 +31,9 @@ jQuery(document).ready(function($) {
                 query:command,
             },
             function(data,status){
-                term.echo(data);
+                if (data != ""){
+                    term.echo(data);
+                }
             });
         }, {
         greetings: '[[b;red;black] _______         _             _       \r\n|__   __|       (_)           (_)      \r\n   | | ___  _ __ _  __ _ _ __  _ _ __  \r\n   | |\/ _ \\| \'__| |\/ _` | \'_ \\| | \'_ \\ \r\n   | | (_) | |  | | (_| | | | | | | | |\r\n   |_|\\___\/|_|  |_|\\__,_|_| |_|_|_| |_|]\r\n\t\t\t\t\t[[;red;black]  robert-i.com 2014]\r\n----------------------------------------\r\nCreated by Robert Ignasiak \r\n[[;lightblue;black]Facebook: www.facebook.com/torianin\r\nLinkedin: www.linkedin.com/in/torianin\r\nInstagram: www.instagram.com/torianin]\r\n----------------------------------------\r\n\r\nWitam serdecznie i czekam na pytania.',
