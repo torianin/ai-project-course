@@ -9,7 +9,7 @@ Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com
 class Protected < Sinatra::Base
 
   use Rack::Auth::Basic, "Protected Area" do |username, password|
-    username == 'admin' && password == 'test'
+    username == 'admin' && password == 'wXpwGdK7MwB8jquPAZbzBG'
   end
 
   get '/reset' do
