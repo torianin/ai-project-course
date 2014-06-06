@@ -1,3 +1,25 @@
+require 'ispell'
+
+speller = Ispell.new('./ispell', './polish')
+
+speller.suggest('mój') # => 'mantissa'
+speller.suggest('muj')    # => 'cake'
+
+results = speller.spellcheck('hello wonderfull wordl nice 42 trouting')
+puts "Misspelled words: #{results.collect {|w| w.original}.join(',')}"
+results.each do |res|
+  case res.type
+    when :miss, :guess
+      puts "#{res.original} => #{res.guesses.join(',')}"
+    when :none
+      puts "#{res.original} wasn't found"
+    else
+      puts "#{res.type.to_s} type of result"
+  end
+end
+
+speller.destroy!
+
 def removeSpacialChars(text)
     text
     text.gsub!(/[Ąâàãáäåăąǎǟǡǻȃȧẵặ]/,'a')
