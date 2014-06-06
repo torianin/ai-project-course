@@ -16,6 +16,7 @@ class Dictionary
                 checkvalue = false
                 suggestions = @dict.suggest(word)
                 if (suggestions.size)
+                    @correction = suggestions.first
                     return "Chyba coś źle napisałeś, nie chodziło ci przypadkiem o słowo #{@correction} :p"
                 end
             end
