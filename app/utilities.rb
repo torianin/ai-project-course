@@ -1,6 +1,6 @@
 require 'ispell'
 
-speller = Ispell.new('./app/ispell', './app/polish')
+speller = Ispell.new('ispell', './app/polish')
 
 speller.suggest('mój') # => 'mantissa'
 speller.suggest('muj')    # => 'cake'
