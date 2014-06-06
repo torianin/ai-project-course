@@ -51,6 +51,8 @@ class Public < Sinatra::Base
 			else
 				return $alice.askAlice(query)
 			end
+		else
+			return nil
 		end
 	end
 end
