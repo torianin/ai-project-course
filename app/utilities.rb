@@ -5,7 +5,7 @@ class Dictionary
   include Singleton
 
     def initialize()
-        @dict = Hunspell.new("./app/pl_PL.aff", "./app/pl_PL.dic")
+        @dict = Hunspell.new("./slownik/pl_PL.aff", "./slownik/pl_PL.dic")
     end
 
     def checkWords(query)
