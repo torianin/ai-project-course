@@ -2,6 +2,7 @@ require 'sinatra'
 require './app/model'
 require './app/utilities'
 require './app/programr'
+require './app/config'
 require 'pusher'
 
 Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com/apps/76635"
@@ -16,8 +17,14 @@ class Protected < Sinatra::Base
     createModel
   end
 
-  get '/another' do
-    "another secret"
+  get '/auto' do
+    $mode = "auto"
+    "Tryb automatyczny"
+  end
+
+  get '/manual' do
+    $mode = "manual"
+    "Tryb manualny"
   end
 
 end
@@ -35,13 +42,15 @@ class Public < Sinatra::Base
 		Pusher['sended-message'].trigger('sended-message', {:message => "#{query}"})
 		d = Dictionary.instance
 		checkedValue = d.checkWords(query) 
-		if checkedValue != true
-			return checkedValue
-		end
-		if params[:query] == 'Cześć Robcio'
-			return "[[b;red;black]Kocham Cię]"
-		else
-			return $alice.askAlice(query)
+		if $mode == "auto"
+			if checkedValue != true
+				return checkedValue
+			end
+			if params[:query] == 'Cześć Robcio'
+				return "[[b;red;black]Kocham Cię]"
+			else
+				return $alice.askAlice(query)
+			end
 		end
 	end
 end
