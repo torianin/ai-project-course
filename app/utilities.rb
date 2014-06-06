@@ -1,6 +1,5 @@
 require 'hunspell-ffi'
 
-# directly specify dictionaries (legacy)
 dict = Hunspell.new("./app/pl_PL.aff", "./app/pl_PL.dic")
 
 dict.spell("walked")        # => true  same as #check, #check?
