@@ -1,5 +1,6 @@
 require 'sinatra'
 require './app/model'
+require './app/utilities'
 require './app/programr'
 require 'pusher'
 
