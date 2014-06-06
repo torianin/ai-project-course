@@ -10,10 +10,10 @@
 <!-- Last modified 10/5/2011 -->
 <!-- -->
 
-<category><pattern>KURWA _</pattern>
+<category><pattern>KURWA_</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
-<category><pattern>_ KURWA</pattern>
+<category><pattern>_KURWA</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
 <category><pattern>KURWA</pattern>
@@ -22,25 +22,25 @@
 <category><pattern>CHUJ_</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
-<category><pattern>_ CHUJ</pattern>
+<category><pattern>_CHUJ</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
 <category><pattern>CHUJ</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
-<category><pattern>PIERDOL _</pattern>
+<category><pattern>PIERDOL_</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
-<category><pattern>_ PIERDOL</pattern>
+<category><pattern>_PIERDOL</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
 <category><pattern>PIERDOL</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
-<category><pattern>CIPA _</pattern>
+<category><pattern>CIPA_</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
-<category><pattern>_ CIPA</pattern>
+<category><pattern>_CIPA</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
 <category><pattern>CIPA</pattern>

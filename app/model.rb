@@ -3,7 +3,8 @@ require 'singleton'
 
 class PostgresConnector
 	include Singleton
-	def connect 
+	
+	def initialize() 
 	    db_parts = ENV['DATABASE_URL'].split(/\/|:|@/)
 	    username = db_parts[3]
 	    password = db_parts[4]
@@ -36,14 +37,14 @@ class PostgresConnector
 end
 
 def createModel
-	p = PostgresConnector.new()
+	p = PostgresConnector.instance
 	p.connect
 	p.createTables
 	p.disconnect
 end
 
 def addQuery(query)
-	p = PostgresConnector.new()
+	p = PostgresConnector.instance
 	p.connect
 	p.prepareInsertUserStatement
 	p.addQuery(query)
