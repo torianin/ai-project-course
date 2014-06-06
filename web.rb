@@ -37,6 +37,7 @@ class Public < Sinatra::Base
 		checkedValue = d.checkWords(query) 
 		if checkedValue != true
 			return checkedValue
+		end
 		if params[:query] == 'Cześć Robcio'
 			return "[[b;red;black]Kocham Cię]"
 		else
