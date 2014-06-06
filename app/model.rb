@@ -39,12 +39,10 @@ end
 def createModel
 	p = PostgresConnector.instance
 	p.createTables
-	p.disconnect
 end
 
 def addQuery(query)
 	p = PostgresConnector.instance
 	p.prepareInsertUserStatement
 	p.addQuery(query)
-	p.disconnect
 end
