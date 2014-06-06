@@ -9,7 +9,6 @@ GEM
       dotenv (~> 0.11.1)
       thor (~> 0.19.1)
     httpclient (2.3.4.1)
-    ispell (0.1.1)
     multi_json (1.10.1)
     pg (0.17.1)
     programr (0.0.1)
@@ -48,7 +47,6 @@ PLATFORMS
 
 DEPENDENCIES
   foreman
-  ispell
   pg
   programr
   pusher
