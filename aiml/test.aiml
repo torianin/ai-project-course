@@ -23,4 +23,7 @@
 <category><pattern>MOGE CIE POMIZIAC PO BRZUSZKU</pattern>
 <template>Pewnie.</template>
 </category>
+<category><pattern>POMOC</pattern>
+<template>Jak rozmawiasz z drugą osobą to też mówisz tylko słowo pomoc :p</template>
+</category>
 </aiml>

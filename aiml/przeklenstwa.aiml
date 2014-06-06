@@ -19,7 +19,7 @@
 <category><pattern>KURWA</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
-<category><pattern>CHUJ _</pattern>
+<category><pattern>CHUJ_</pattern>
 <template>A teraz to samo tylko bez przekleństw brzydalu :p</template>
 </category>
 <category><pattern>_ CHUJ</pattern>
