@@ -10,8 +10,8 @@ class Dictionary
 
     def checkWords(query)
         checkvalue = true
-        checklist = query.delete('^aąbcćdeęfghijklłmnńoóprsśtuwyzźżAĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ').split
-        checklist.each do |word| 
+        checklist = query.delete('^ aąbcćdeęfghijklłmnńoóprsśtuwyzźżAĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ').split
+        checklist.each { |word| 
             if @dict.check(word) == false
                 checkvalue = false
                 suggestions = @dict.suggest(word)
@@ -20,7 +20,7 @@ class Dictionary
                     return "Chyba coś źle napisałeś, nie chodziło ci przypadkiem o słowo #{@correction} :p"
                 end
             end
-        end
+        }
         if !checkvalue
             return "Coś jest nie tak, ale nie wiem o co Ci chodziło :p"
         else
