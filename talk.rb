@@ -1,6 +1,6 @@
+require 'rubygems'
 require 'pusher'
 require 'pusher-client'
-require 'pp'
 require 'pusher'
 require 'json'
 
