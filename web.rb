@@ -36,7 +36,6 @@ class Public < Sinatra::Base
  	set :session_secret, 'nothing is secret on internet'
 
 	get '/' do
-		@js = $js
 		getSessionId
 		erb :index
 	end
