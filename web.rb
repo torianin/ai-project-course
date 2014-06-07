@@ -45,10 +45,6 @@ class Public < Sinatra::Base
 		erb :index
 	end
 
-	get '/session' do
-		getSessionId
-	end
-
 	post '/ask' do
 		query = params[:query]
 		addQuery(query)
