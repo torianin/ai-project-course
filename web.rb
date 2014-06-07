@@ -1,5 +1,4 @@
 require 'sinatra'
-require "sinatra/cookies"
 require './app/model'
 require './app/utilities'
 require './app/programr'
@@ -31,15 +30,17 @@ class Protected < Sinatra::Base
 end
 
 class Public < Sinatra::Base
-	helpers Sinatra::Cookies
 	set :protection, :except => :frame_options
+  	enable :sessions
+ 	set :session_secret, 'nothing is secret on internet'
 
 	get '/' do
-		if cookie[:user_id].nil? then
-			 t = Time.now
-			cookie[:user_id] = t.to_i
-		end
+		session[:session_id]
 		erb :index
+	end
+
+	get '/session' do
+		session[:session_id]
 	end
 
 	post '/ask' do
