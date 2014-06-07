@@ -324,5 +324,8 @@
 <category><pattern>NIE UCZYSZ SIE</pattern>
 <template>Uczę się cały czas :p</template>
 </category>
+<category><pattern>CO SLYCHAC</pattern>
+<template>Wszystko po staremu :p</template>
+</category>
 </aiml>
 

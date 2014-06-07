@@ -24,6 +24,7 @@ socket['sended-message'].bind('sended-message') do |data|
   users.push("#{message_hash["userid"]}") unless users.include?("#{message_hash["userid"]}")
   last_message = message_hash["message"]
   puts message_hash["message"] + " " + users.index("#{message_hash["userid"]}").to_s
+  print "\a"
 end
 
 socket.connect(true) # Connect asynchronously

@@ -7,7 +7,13 @@ class Alice
 
 	def initialize()
 		@robot = ProgramR::Facade.new
-		@robot.learn(['./aiml/test.aiml','./aiml/seks.aiml','./aiml/profil_clienta.aiml','./aiml/przywitania.aiml','./aiml/bot.aiml','./aiml/film.aiml','./aiml/przeklenstwa.aiml'])
+		@robot.learn([
+			'../aiml/test.aiml','../aiml/seks.aiml',
+			'../aiml/profil_clienta.aiml','../aiml/przywitania.aiml',
+			'../aiml/bot.aiml','../aiml/film.aiml',
+			'../aiml/przeklenstwa.aiml','../aiml/popularne.aiml',
+			'../aiml/kawaly.aiml'
+			])
 	end
 
 	def askAlice(question)
@@ -16,6 +22,10 @@ class Alice
 	end
 end
 
-a = Alice.instance
-message = gets.chomp
-puts a.askAlice(message)
+message = ""
+
+while(message != "exit")
+	a = Alice.instance
+	message = gets.chomp
+	puts a.askAlice(message)
+end
