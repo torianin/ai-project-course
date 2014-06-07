@@ -13,7 +13,7 @@ def checkExtra(question)
     "Dzisiaj jest #{t} :p"
   elsif (question =~ /ile/)
     q = question.delete('^+\-\*\/01234567890')
-    return eval(q).to_s
+    return "#{eval(q).to_s} :p"
   else
     return true
   end
