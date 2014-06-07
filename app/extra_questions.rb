@@ -1,10 +1,13 @@
 def checkExtra(question)
 	if question =~ /godzin/
-		t = Time.now
-		"Jest godzina #{t.hour} :p"
+		t = DateTime.now
+    t = t.in_time_zone(+2)
+    t = t.strftime("%I:%M")
+		"Jest godzina #{t} :p"
   elsif question =~ /dat/
-    t = Time.now
-    t = t.strftime("%m/%d/%Y")
+    t = DateTime.now
+    t = t.in_time_zone(+2)
+    t = t.strftime("%d/%m/%Y")
     "Dzisiaj jest #{t} :p"
   else
     return true
