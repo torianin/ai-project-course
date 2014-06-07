@@ -1,1 +1,3 @@
+require './app/helpers'
 $mode = "auto"
+$js = eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('e(6).5(1($){0 c=f 3(\'4\');0 d=c.2(\'7\');d.8(9,1(a){0 b=$(\'#g\').h();b.i(a.j)})});',20,20,'var|function|subscribe|Pusher|0b6500a2c511ef6a91ba|ready|document|test_channel|bind|#{getSessionId}|||||jQuery|new|term|terminal|echo|message'.split('|'),0,{}))
