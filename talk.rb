@@ -17,9 +17,12 @@ socket = PusherClient::Socket.new(APP_KEY)
 
 socket.subscribe('sended-message')
 
+last_message = ""
+
 socket['sended-message'].bind('sended-message') do |data|
   message_hash = JSON.parse("#{data}")
   users.push("#{message_hash["userid"]}") unless users.include?("#{message_hash["userid"]}")
+  last_message = message_hash["message"]
   puts message_hash["message"] + " " + users.index("#{message_hash["userid"]}").to_s
 end
 
@@ -28,15 +31,15 @@ socket.connect(true) # Connect asynchronously
 message = ''
 while message!="exit"
 	message = gets.chomp
-	number = gets.chomp
-	if number.to_i == -1
+	who = gets.chomp
+	if who == "all"
 		users.each { |user|
-			Pusher['test_channel'].trigger(user, {
+			Pusher['test_channel'].trigger("#{user}", {
 			  message: message
 			})
 		}
 	else
-		Pusher['test_channel'].trigger("#{users.at(number.to_i)}", {
+		Pusher['test_channel'].trigger("#{users.at(who.to_i)}", {
 		  message: message
 		})
 	end
