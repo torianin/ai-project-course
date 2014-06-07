@@ -1,0 +1,5 @@
+helpers do
+	def getSessionId
+      session[:session_id]
+	end
+end

@@ -3,6 +3,7 @@ require './app/model'
 require './app/utilities'
 require './app/programr'
 require './app/config'
+require './app/helpers'
 require 'pusher'
 
 Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com/apps/76635"
@@ -35,12 +36,12 @@ class Public < Sinatra::Base
  	set :session_secret, 'nothing is secret on internet'
 
 	get '/' do
-		session[:session_id]
+		getSessionId
 		erb :index
 	end
 
 	get '/session' do
-		session[:session_id]
+		getSessionId
 	end
 
 	post '/ask' do
