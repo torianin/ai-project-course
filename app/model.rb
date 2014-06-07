@@ -40,7 +40,7 @@ def createModel
 	p.createTables
 end
 
-def addQuery(query)
+def addQuery(query, talkid)
 	p = PostgresConnector.instance
-	p.addQuery(query)
+	p.addQuery(query, talkid)
 end
