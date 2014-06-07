@@ -62,7 +62,8 @@ class Public < Sinatra::Base
 			if params[:query] == 'Cześć Robcio'
 				return "[[b;red;black]Kocham Cię]"
 			else
-				return $alice.askAlice(query)
+				a = Alice.instance
+				return a.askAlice(query)
 			end
 		else
 			return nil
