@@ -1,11 +1,11 @@
-require './app/utilities'
+require './utilities'
 require 'programr'
 require 'singleton'
 
 class Alice
 	include Singleton
 
-	def createAlice
+	def initialize()
 		@robot = ProgramR::Facade.new
 		@robot.learn(['./aiml/test.aiml','./aiml/seks.aiml','./aiml/profil_clienta.aiml','./aiml/przywitania.aiml','./aiml/bot.aiml','./aiml/film.aiml','./aiml/przeklenstwa.aiml'])
 	end
@@ -15,3 +15,7 @@ class Alice
 		reaction = @robot.get_reaction(question)
 	end
 end
+
+a = Alice.instance
+message = gets.chomp
+puts a.askAlice(message)

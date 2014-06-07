@@ -11,7 +11,7 @@ class PostgresConnector
 	    host = db_parts[5]
 	    db = db_parts[7]
 	    @conn = PGconn.open(:host =>  host, :dbname => db, :user=> username, :password=> password)
-		@conn.prepare("insert_query", "insert into query (query_text) values ($1)")
+		@conn.prepare("insert_query", "insert into query (query_text, talkid) values ($1,$2)")
 
 	end
 
@@ -20,13 +20,14 @@ class PostgresConnector
 		CREATE TABLE query (
 			id_query serial PRIMARY KEY,
 			query_text text NOT NULL,
+			talkid text NOT NULL,
 			date timestamp without time zone DEFAULT CURRENT_TIMESTAMP
 		);
 		");
 	end
 
-	def addQuery(query)
-    	@conn.exec_prepared("insert_query", [query])
+	def addQuery(query, talkid)
+    	@conn.exec_prepared("insert_query", [query,talkid])
 	end
 
 	def disconnect

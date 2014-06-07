@@ -48,7 +48,7 @@ class Public < Sinatra::Base
 
 	post '/ask' do
 		query = params[:query]
-		addQuery(query)
+		addQuery(query,getSessionId)
 		Pusher['sended-message'].trigger('sended-message', {:message => "#{query}", :userid =>"#{getSessionId}"})
 		d = Dictionary.instance
 		checkedValue = d.checkWords(query) 
