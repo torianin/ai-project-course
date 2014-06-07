@@ -55,6 +55,7 @@ class Public < Sinatra::Base
 		if $mode == "auto"
 			if params[:query] == 'Cześć Robcio'
 				return "[[b;red;black]Kocham Cię]"
+			end
 			if checkedValue != true
 				return checkedValue
       end
