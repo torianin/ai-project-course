@@ -31,8 +31,15 @@ end
 
 class Public < Sinatra::Base
 	set :protection, :except => :frame_options
+  	enable :sessions
+ 	set :session_secret, 'nothing is secret on internet'
+  	useridcounter = 0
 
 	get '/' do
+		if session[:userid].nil? then
+			 t = Time.now
+			session[:userid] = t.to_i
+		else
 		erb :index
 	end
 
