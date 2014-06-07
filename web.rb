@@ -53,14 +53,13 @@ class Public < Sinatra::Base
 		d = Dictionary.instance
 		checkedValue = d.checkWords(query) 
 		if $mode == "auto"
+			if params[:query] == 'Cześć Robcio'
+				return "[[b;red;black]Kocham Cię]"
 			if checkedValue != true
 				return checkedValue
       end
       if checkExtra(query) != true
         return checkExtra(query)
-      end
-			if params[:query] == 'Cześć Robcio'
-				return "[[b;red;black]Kocham Cię]"
 			else
 				a = Alice.instance
 				return a.askAlice(query)
