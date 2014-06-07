@@ -4,12 +4,30 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="bond (v0.5.1, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv (v0.11.1, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv-deployment (v0.0.2, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.0.11, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="foreman (v0.71.0, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="httpclient (v2.3.4.1, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hunspell-ffi (v0.1.3, RVM: ruby-2.1.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.10.1, RVM: ruby-2.1.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.17.1, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="programr (v0.0.1, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pusher (v0.12.0, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pusher-client (v0.6.0, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-protection (v1.5.3, RVM: ruby-2.1.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, RVM: ruby-2.1.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v10.3.2, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ripl (v0.7.1, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ripl-multi_line (v0.3.1, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ripl-rack (v0.2.1, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="signature (v0.1.7, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sinatra (v1.4.5, RVM: ruby-2.1.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, RVM: ruby-2.1.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tux (v0.3.0, RVM: ruby-2.1.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="websocket (v1.1.4, RVM: ruby-2.1.1) [gem]" level="application" />
   </component>
 </module>
 

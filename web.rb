@@ -3,6 +3,7 @@ require './app/model'
 require './app/utilities'
 require './app/programr'
 require './app/config'
+require './app/extra_questions'
 require 'pusher'
 
 Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com/apps/76635"
@@ -54,7 +55,10 @@ class Public < Sinatra::Base
 		if $mode == "auto"
 			if checkedValue != true
 				return checkedValue
-			end
+      end
+      if checkExtra(query) != true
+        return checkExtra(query)
+      end
 			if params[:query] == 'Cześć Robcio'
 				return "[[b;red;black]Kocham Cię]"
 			else
