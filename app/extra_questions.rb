@@ -12,7 +12,7 @@ def checkExtra(question)
     t = t.strftime("%d/%m/%Y")
     "Dzisiaj jest #{t} :p"
   elsif question =~ /ile/
-    q = question.delete('^+-*/01234567890()%')
+    q = question.delete('^+-*\/01234567890()%')
     return eval(q)
   else
     return true
