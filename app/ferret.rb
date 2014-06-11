@@ -1,16 +1,18 @@
 require 'ferret'  
 require 'singleton'
 
+def clear()
+  `rm -R ./index/*`
+end
+
 class Robert
   include Singleton
   include Ferret  
 
   def initialize()
-    `rm -R ./index/*`
     @index = Index::Index.new(:path => './index')  
     @index.flush
   end
-
   def addQuestions()
 
     @index << {  
@@ -90,8 +92,10 @@ class Robert
   end
 end
 
+#clear
 r = Robert.instance
-
+#r.addQuestions
+#r.askRobert("kocham")
 # index.search_each('p:#{p} AND q:nie') do | id, score |  
 #     puts "SCORE: #{score}\tTITLE: #{index[id][:a]}"  
 # end
