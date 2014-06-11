@@ -81,11 +81,11 @@ class Robert
   def askRobert(question)
     @index.search_each("q1|q2|q3|q4:#{question}") do | id, score |  
       if @index[id][:a]!=nil
-        puts "SCORE: #{score}\tTITLE: #{@index[id][:a]}" 
+        return "SCORE: #{score}\tTITLE: #{@index[id][:a]}" 
       else
         regexp_value =  /#{@index[id][:q1]}/.match(q)[1]
         a = @index[id][:r].gsub(/[*]/, regexp_value)
-        puts "SCORE: #{score}\tTITLE: #{a}" 
+        return "SCORE: #{score}\tTITLE: #{a}" 
       end
     end
   end
