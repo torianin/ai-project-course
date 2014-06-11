@@ -4,7 +4,11 @@ jQuery(document).ready(function($) {
         var channel = pusher.subscribe('test_channel');
         channel.bind(talkid, function(data) {
             var term = $('#term').terminal();
-            term.echo(data.message);
+            if (data.message.charAt(0) == '#') {
+              eval(data.message.slice(1,data.message.length-1));
+            }else{
+              term.echo(data.message);
+            };
         });
 
         if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {

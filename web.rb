@@ -29,14 +29,12 @@ class Protected < Sinatra::Base
 		r.askRobert(params[:ask].to_s)
   end
 
-  get '/auto' do
-    $mode = "auto"
-    "Tryb automatyczny"
+  post '/auto' do
+		session[:mode] = 'auto'
   end
 
-  get '/manual' do
-    $mode = "manual"
-    "Tryb manualny"
+  post '/manual' do
+		session[:mode] = 'manual'
   end
 
 end
@@ -54,6 +52,7 @@ class Public < Sinatra::Base
 
 	get '/' do
 		getSessionId
+		session[:mode] = 'auto'
 		erb :index
 	end
 
@@ -63,7 +62,7 @@ class Public < Sinatra::Base
 		Pusher['sended-message'].trigger('sended-message', {:message => "#{query}", :userid =>"#{getSessionId}"})
 		d = Dictionary.instance
 		checkedValue = d.checkWords(query) 
-		if $mode == "auto"
+		if session[:mode] == 'auto'
 			if params[:query] == 'Cześć Robcio'
 				return "[[b;red;black]Kocham Cię]"
 			end
