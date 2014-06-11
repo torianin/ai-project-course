@@ -20,21 +20,9 @@ class Protected < Sinatra::Base
     createModel
   end
 
-  get '/session' do
-
-  end
-
   get '/ferret/:ask' do
 		r = Robert.instance
 		r.askRobert(params[:ask].to_s)
-  end
-
-  post '/auto' do
-		session[:mode] = 'auto'
-  end
-
-  post '/manual' do
-		session[:mode] = 'manual'
   end
 
 end
@@ -56,6 +44,14 @@ class Public < Sinatra::Base
 		erb :index
 	end
 
+  post '/auto' do
+		session[:mode] = 'auto'
+  end
+
+  post '/manual' do
+		session[:mode] = 'manual'
+  end
+  
 	post '/ask' do
 		query = params[:query]
 		addQuery(query,getSessionId)
