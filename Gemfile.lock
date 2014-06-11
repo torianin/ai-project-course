@@ -5,6 +5,7 @@ GEM
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
+    ferret (0.11.8.5)
     ffi (1.0.11)
     foreman (0.71.0)
       dotenv (~> 0.11.1)
@@ -54,6 +55,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ferret
   foreman
   hunspell-ffi
   pg
