@@ -32,12 +32,12 @@ socket.connect(true) # Connect asynchronously
 message = ''
 while message!="exit"
 	message = gets.chomp
-	if message = "a"
-		message = "#$.post( \"auto\" );"
-	elsif message = "m"
-		message = "#$.post( \"manual\" );"
-	elsif message = "t"
-		message = "#alert(\"test\");"
+	if message == "a"
+		message = '#$.post( \"auto\" );'
+	elsif message == "m"
+		message == '#$.post( \"manual\" );'
+	elsif message == "t"
+		message = '#alert(\"test\");'
 	end
 	who = gets.chomp
 	if who == "all"
