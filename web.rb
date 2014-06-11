@@ -2,6 +2,8 @@ require 'sinatra'
 require './app/model'
 require './app/utilities'
 require './app/programr'
+require './app/programr'
+require './app/ferret'
 require './app/config'
 require './app/extra_questions'
 require 'pusher'
@@ -16,6 +18,15 @@ class Protected < Sinatra::Base
 
   get '/reset' do
     createModel
+  end
+
+  get '/session' do
+
+  end
+
+  get '/ferret/:ask' do
+		r = Robert.instance
+		return r.askRobert(params[:ask])
   end
 
   get '/auto' do
