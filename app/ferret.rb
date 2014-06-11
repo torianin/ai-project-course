@@ -6,7 +6,18 @@ class Robert
   include Ferret  
 
   def initialize()
-    @index = Index::Index.new(:path => '/test/index', :auto_flush => true)  
+    `rm -R ./index/*`
+    @index = Index::Index.new(:path => './index')  
+    @index.flush
+  end
+
+  def addQuestions()
+
+    @index << {  
+      :q1 => 'seks',  
+      :a => 'Przykro mi nie uprawiam przypadkowego seksu z nieznajomymi :p',  
+      :t => 'seks'  
+    }   
 
     @index << {  
       :q1 => 'seks',  
@@ -67,18 +78,19 @@ class Robert
   end
 
   def askRobert(question)
-    @index.search_each('q1|q2|q3|q4:#{question}') do | id, score |  
+    @index.search_each("q1|q2|q3|q4:#{question}") do | id, score |  
       if @index[id][:a]!=nil
-        return "SCORE: #{score}\tTITLE: #{@index[id][:a]}" 
+        puts "SCORE: #{score}\tTITLE: #{@index[id][:a]}" 
       else
         regexp_value =  /#{@index[id][:q1]}/.match(q)[1]
         a = @index[id][:r].gsub(/[*]/, regexp_value)
-        return "SCORE: #{score}\tTITLE: #{a}" 
+        puts "SCORE: #{score}\tTITLE: #{a}" 
       end
     end
   end
 end
 
+r = Robert.instance
 
 # index.search_each('p:#{p} AND q:nie') do | id, score |  
 #     puts "SCORE: #{score}\tTITLE: #{index[id][:a]}"  
