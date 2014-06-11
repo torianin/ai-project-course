@@ -25,8 +25,8 @@ class Protected < Sinatra::Base
   end
 
   get '/ferret/:ask' do
-		r = Robert.instance
-		r.askRobert(params[:ask])
+#		r = Robert.instance
+#		r.askRobert(params[:ask])
 		"test"
   end
 
