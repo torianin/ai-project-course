@@ -1,13 +1,12 @@
 require 'ferret'  
 require 'singleton'
 
-
 class Robert
   include Singleton
   include Ferret  
 
   def initialize()
-    @index = Index::Index.new()  
+    @index = Index::Index.new(:path => '/test/index', :auto_flush => true)  
 
     @index << {  
       :q1 => 'seks',  
