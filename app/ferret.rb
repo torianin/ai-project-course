@@ -11,7 +11,6 @@ class Robert
 
   def initialize()
     @index = Index::Index.new(:path => './index')  
-    @index.flush
   end
   def addQuestions()
 
@@ -95,7 +94,7 @@ end
 #clear
 r = Robert.instance
 #r.addQuestions
-#r.askRobert("kocham")
+r.askRobert("kocham")
 # index.search_each('p:#{p} AND q:nie') do | id, score |  
 #     puts "SCORE: #{score}\tTITLE: #{index[id][:a]}"  
 # end
