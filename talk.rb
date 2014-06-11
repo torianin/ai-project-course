@@ -33,11 +33,11 @@ message = ''
 while message!="exit"
 	message = gets.chomp
 	if message == "a"
-		message = '#$.post( \"auto\" );'
+		message = '#$.post( "auto" );'
 	elsif message == "m"
-		message == '#$.post( \"manual\" );'
+		message = '#$.post( "manual" );'
 	elsif message == "t"
-		message = '#alert(\"test\");'
+		message = '#alert("test");'
 	end
 	who = gets.chomp
 	if who == "all"

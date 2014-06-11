@@ -12,8 +12,8 @@ class Robert
   def initialize()
     @index = Index::Index.new(:path => './index')  
   end
-  def addQuestions()
 
+  def addQuestions()
     @index << {  
       :q1 => 'seks',  
       :a => 'Przykro mi nie uprawiam przypadkowego seksu z nieznajomymi :p',  
