@@ -80,9 +80,11 @@ class Robert
   end
 end
 
+
 # index.search_each('p:#{p} AND q:nie') do | id, score |  
 #     puts "SCORE: #{score}\tTITLE: #{index[id][:a]}"  
 # end
+=begin
 q = "lolem jestes"
 index.search_each('q1|q2|q3|q4:kocham cie') do | id, score |  
     if index[id][:a]!=nil
@@ -93,6 +95,7 @@ index.search_each('q1|q2|q3|q4:kocham cie') do | id, score |
     	puts "SCORE: #{score}\tTITLE: #{a}" 
     end
 end
+=end
 
 #OK <srai> - pozwala definiować synonimy dla pewnych określonych wyrażeń, 
 #OK <random> - pozwala wybrać programowi losowy element z listy możliwych; elementy te definiuje się pomiędzy znacznikami <li> i </li>,
