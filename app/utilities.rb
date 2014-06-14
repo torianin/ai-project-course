@@ -1,5 +1,6 @@
 require 'hunspell-ffi'
 require 'singleton'
+require 'mechanize'
 
 class Dictionary
   include Singleton
@@ -63,3 +64,11 @@ def removeSpacialChars(text)
     text.gsub!(/\-/,' ')
     text
 end
+
+def checkName(text)
+    agent = Mechanize.new
+    page = agent.get('http://pl.wiktionary.org/wiki/Indeks:Polski_-_Imiona')
+    puts page.body.include?(text)
+end
+
+checkName("Robert")

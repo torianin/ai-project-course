@@ -3,6 +3,7 @@ require 'pusher'
 require 'pusher-client'
 require 'pusher'
 require 'json'
+require 'terminal-table'
 
 Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com/apps/76635"
 
@@ -39,16 +40,15 @@ while message!="exit"
 	elsif message == "t"
 		message = '#alert("test");'
 	end
-	who = gets.chomp
-	if who == "all"
+	if message.scan(/-\d+|\d+/).last.to_i == -1
 		users.each { |user|
 			Pusher['test_channel'].trigger("#{user}", {
-			  message: message
+			  message: message.delete(message.scan(/-\d+|\d+/).last)
 			})
 		}
 	else
-		Pusher['test_channel'].trigger("#{users.at(who.to_i)}", {
-		  message: message
+		Pusher['test_channel'].trigger("#{users.at(message.scan(/-\d+|\d+/).last.to_i)}", {
+		  message: message.delete(message.scan(/-\d+|\d+/).last)
 		})
 	end
 end

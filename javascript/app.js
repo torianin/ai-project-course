@@ -30,15 +30,19 @@ jQuery(document).ready(function($) {
             }
         });
         $('#term').terminal(function(command, term) {
-            $.post("ask",
-            {
-                query:command,
-            },
-            function(data,status){
-                if (data != ""){
-                    term.echo(data);
-                }
-            });
+            if (command != ""){
+                $.post("ask",
+                {
+                        query:command,
+                },
+                function(data,status){
+                    if (data != ""){
+                        term.echo(data);
+                    }
+                });
+            } else{
+                term.echo("Milczenie to tekst, który niezwykle łatwo jest błędnie zinterpretować :p");
+            }
         }, {
         greetings: '[[b;red;black] _______         _             _       \r\n|__   __|       (_)           (_)      \r\n   | | ___  _ __ _  __ _ _ __  _ _ __  \r\n   | |\/ _ \\| \'__| |\/ _` | \'_ \\| | \'_ \\ \r\n   | | (_) | |  | | (_| | | | | | | | |\r\n   |_|\\___\/|_|  |_|\\__,_|_| |_|_|_| |_|]\r\n\t\t\t\t\t[[;red;black]  robert-i.com 2014]\r\n----------------------------------------\r\nCreated by Robert Ignasiak \r\n[[;lightblue;black]Facebook: http://facebook.com/torianin\r\nLinkedin: http://linkedin.com/in/torianin\r\nInstagram: http://instagram.com/torianin]\r\n----------------------------------------\r\n\r\nWitam serdecznie i czekam na pytania.',
         name: 'torianin',
