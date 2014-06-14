@@ -1,7 +1,7 @@
 $seks_questions = [{:q=>"Seks", :a=>"Przykro mi nie uprawiam przypadkowego seksu z nieznajomymi :p", :t=>"seks"},
 	{:q=>"Boli mnie głowa", :a=>"Dobrze, że mam tabletki na ból głowy :p", :t=>"seks"},
 	{:q=>"Chce mieć z tobą dzieci", :a=>"No to bierzmy się do pracy :p", :t=>"seks"},
-	{:q=>"Kocham cie", :a=>":*", :t=>"seks"},
+	{:q=>"Kocham Cię", :a=>":*", :t=>"seks"},
 	{:q=>"Uprawiajmy seks", :a=>"Przykro mi nie uprawiam przypadkowego seksu z nieznajomymi :p", :t=>"seks"},
 	{:q=>"Ugryź mnie", :a=>"Gdzie chcesz żebym Cię ugryzł :p", :t=>"seks"},
 	{:q=>"Jesteś napalony", :a=>"Nie podniecam się tak łatwo :p", :t=>"seks"},

@@ -15,11 +15,14 @@ class Robert
   end
 
   def addQuestions()
-    @index << $seks_questions
+    puts @index.size
+    $seks_questions.each { |question| 
+      @index << question
+    }
   end
 
   def askRobert(question)
-    @index.search_each('q:#{question}') do | id, score |  
+    @index.search_each("q:#{question}") do | id, score |  
       if @index[id][:a]!=nil
         return "#{@index[id][:a]}" 
       else
@@ -34,6 +37,7 @@ end
 clear
 r = Robert.instance
 r.addQuestions
+
 # index.search_each('p:#{p} AND q:nie') do | id, score |  
 #     puts "SCORE: #{score}\tTITLE: #{index[id][:a]}"  
 # end
