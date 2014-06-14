@@ -40,15 +40,14 @@ class Public < Sinatra::Base
 		end
 		
 		def setColor(text,color)
-
-			return "[[b;#{color};black]" + text + "]"
+			return "[[b;#{color};black]#{text}]"
 		end
 	end
 
 	get '/' do
 		getSessionId
 		session[:name] = nil
-		session[:mode] = 'auto'Jes
+		session[:mode] = 'auto'
 		erb :index
 	end
 
