@@ -24,13 +24,13 @@ class Robert
     $seks_questions.each { |question| 
       @index << question
     }
-    $przeklenstwa_questions.each { |question|  }
+    $przeklenstwa_questions.each { |question|  
       @index << question
     }
-    $bot_questions.each { |question|  }
+    $bot_questions.each { |question|  
       @index << question
     }
-    $przywitania_questions.each { |question|  }
+    $przywitania_questions.each { |question|  
       @index << question
     }
     puts @index.size
