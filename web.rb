@@ -79,7 +79,7 @@ class Public < Sinatra::Base
         return checkExtra(query)
 			else
 				r = Robert.instance
-				replay = a.askRobert(query)
+				replay = r.askRobert(query)
 				Pusher['sended-message'].trigger('sended-message', {:message => "#{replay}", :userid =>"#{getSessionId}"})
 				return replay
 			end
