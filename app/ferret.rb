@@ -31,8 +31,8 @@ class Robert
   end
 end
 
+clear
 r = Robert.instance
-r.clear
 r.addQuestions
 # index.search_each('p:#{p} AND q:nie') do | id, score |  
 #     puts "SCORE: #{score}\tTITLE: #{index[id][:a]}"  
