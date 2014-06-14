@@ -81,6 +81,7 @@ class Public < Sinatra::Base
 				r = Robert.instance
 				query = removeSpacialChars(query)
 				replay = r.askRobert(query)
+				replay = removeSpacialChars(replay)
 				Pusher['sended-message'].trigger('sended-message', {:message => "#{replay}", :userid =>"#{getSessionId}"})
 				return replay
 			end
