@@ -68,5 +68,5 @@ end
 def checkName(text)
     agent = Mechanize.new
     page = agent.get('http://pl.wiktionary.org/wiki/Indeks:Polski_-_Imiona')
-    puts page.body.include?(text)
+    page.body.include?(text)
 end
