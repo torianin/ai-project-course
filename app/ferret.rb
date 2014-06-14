@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'ferret'  
 require 'singleton'
 load './tori/seks.tori'
