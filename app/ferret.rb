@@ -34,7 +34,7 @@ class Robert
         return "#{a}" 
       end
     end
-    return @index[Random.rand(75)][:q]
+    return @index[Random.rand(75)][:q] + " :p"
   end
 end
 
