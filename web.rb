@@ -40,7 +40,7 @@ class Public < Sinatra::Base
 		end
 		
 		def setColor(text)
-			return "[[b;gray;black]#{text}]"
+			return "[[i;white;black]#{text}]"
 		end
 	end
 
