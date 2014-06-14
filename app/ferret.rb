@@ -34,8 +34,7 @@ class Robert
         return "#{a}" 
       end
     end
-      return_messages = ["Nie kumam :p", "Nie mam pojecia jak Ci odpowiedziec :p", "Możemy zmienić temat :p", "Co robisz jutro o 18 :p"]
-      return return_messages[Random.rand(4)]
+    return @index[Random.rand(75)][:q]
   end
 end
 
