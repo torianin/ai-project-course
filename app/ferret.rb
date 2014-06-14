@@ -21,6 +21,15 @@ class Robert
     $seks_questions.each { |question| 
       @index << question
     }
+    $przeklenstwa_questions.each { |question|  }
+      @index << question
+    }
+    $bot_questions.each { |question|  }
+      @index << question
+    }
+    $przywitania_questions.each { |question|  }
+      @index << question
+    }
     puts @index.size
   end
 
@@ -34,8 +43,9 @@ class Robert
         return "#{a}" 
       end
     end
-    
-    return "Muszę Ci powiedzieć coś bardzo ważnego, ".force_encoding('UTF-8') + @index[Random.rand(75)][:q].downcase.force_encoding('UTF-8') + " :p".force_encoding('UTF-8')
+    return_messages = ["Nie kumam :p", "Nie mam pojecia jak Ci odpowiedziec :p", "Możemy zmienić temat :p", "Co robisz jutro o 18 :p"]
+    return return_messages[Random.rand(4)]
+    #return "Muszę Ci powiedzieć coś bardzo ważnego, ".force_encoding('UTF-8') + @index[Random.rand(75)][:q].downcase.force_encoding('UTF-8') + " :p".force_encoding('UTF-8')
     #return "Bardzo mnie to zastanawia i musze zapytać, ".force_encoding('UTF-8') + @index[Random.rand(75)][:q].downcase.force_encoding('UTF-8') + " :p".force_encoding('UTF-8')
   end
 end

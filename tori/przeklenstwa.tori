@@ -1,0 +1,4 @@
+$przeklenstwa_questions = [{:q=>'Kurwa', :a=>'A teraz to samo tylko bez przekleństw brzydalu :p', :t=>'przeklenstwa'},
+{:q=>'Chuj', :a=>'A teraz to samo tylko bez przekleństw brzydalu :p', :t=>'przeklenstwa'},
+{:q=>'Pierdolić', :a=>'A teraz to samo tylko bez przekleństw brzydalu :p', :t=>'przeklenstwa'},
+{:q=>'Jebać', :a=>'A teraz to samo tylko bez przekleństw brzydalu :p', :t=>'przeklenstwa'}]
