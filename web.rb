@@ -29,7 +29,7 @@ end
 
 class Public < Sinatra::Base
 	set :protection, :except => :frame_options
-  	enable :sessions
+  enable :sessions
  	set :session_secret, 'nothing is secret on internet'
 
 	helpers do
@@ -57,6 +57,7 @@ class Public < Sinatra::Base
 		if session[:name] == nil
 			if checkName(params[:query])
 				session[:name] = params[:query]
+				session[:sex] = checkName(params[:query])
 				return "Witaj #{session[:name]}, czekam na pytania :p"
 			else 
 				return "Albo rodzice nazwali Cię mega śmiesznie, albo nie ma takiego imienia i próbujesz mnie oszukać :p"
