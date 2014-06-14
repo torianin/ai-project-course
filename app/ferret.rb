@@ -19,7 +19,7 @@ class Robert
   end
 
   def askRobert(question)
-    @index.search_each("q:#{question}") do | id, score |  
+    @index.search_each('q:#{question}') do | id, score |  
       if @index[id][:a]!=nil
         return "#{@index[id][:a]}" 
       else
