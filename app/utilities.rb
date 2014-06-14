@@ -70,5 +70,3 @@ def checkName(text)
     page = agent.get('http://pl.wiktionary.org/wiki/Indeks:Polski_-_Imiona')
     puts page.body.include?(text)
 end
-
-checkName("Robert")
