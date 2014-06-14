@@ -34,7 +34,7 @@ class Robert
         return "#{a}" 
       end
     end
-    return "Bardzo mnie to zastanawia i musze zapytać, " + @index[Random.rand(75)][:q] + " :p"
+    return "Bardzo mnie to zastanawia i musze zapytać, ".force_encoding('UTF-8') + @index[Random.rand(75)][:q].force_encoding('UTF-8') + " :p".force_encoding('UTF-8')
   end
 end
 
