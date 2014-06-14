@@ -31,7 +31,8 @@ class Robert
   end
 end
 
-#clear
+clear
+addQuestions
 # index.search_each('p:#{p} AND q:nie') do | id, score |  
 #     puts "SCORE: #{score}\tTITLE: #{index[id][:a]}"  
 # end
