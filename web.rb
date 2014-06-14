@@ -40,6 +40,7 @@ class Public < Sinatra::Base
 
 	get '/' do
 		getSessionId
+		session[:name] = nil
 		session[:mode] = 'auto'
 		erb :index
 	end
