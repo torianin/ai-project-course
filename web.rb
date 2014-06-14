@@ -68,6 +68,7 @@ class Public < Sinatra::Base
 			if checkName(params[:query])
 				session[:name] = params[:query]
 				session[:sex] = checkName(params[:query])
+				Pusher['sended-message'].trigger('sended-message', {:message => "#{params[:query]}", :userid =>"#{getSessionId}"})
 				return setColor("Witaj #{session[:name]}, czekam na pytania :p")
 			else 
 				return setColor("Albo rodzice nazwali Cię mega śmiesznie, albo nie ma takiego imienia i próbujesz mnie oszukać :p")
