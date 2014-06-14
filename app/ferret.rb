@@ -34,6 +34,11 @@ class Robert
         return "#{a}" 
       end
     end
+    return_messages = Array.new()
+    return_messages[0] = "Chyba coś źle napisałeś, nie chodziło ci przypadkiem o słowo #{@correction} :p"
+    return_messages[1] = "Wydaje mi się, że miałeś na myśli słowo #{@correction} :p"
+    return_messages[2] = "A nie powinno być #{@correction} zamiast #{word} :p"
+    return return_messages[Random.rand(3)]
   end
 end
 
