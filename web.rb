@@ -82,7 +82,7 @@ class Public < Sinatra::Base
 			else
 				r = Robert.instance
 				replay = r.askRobert("#{query}")
-				#Pusher['sended-message'].trigger('sended-message', {:message => "#{replay}", :userid =>"#{getSessionId}"})
+				Pusher['sended-message'].trigger('sended-message', {:message => "#{replay}", :userid =>"#{getSessionId}"})
 				return replay
 			end
 		else
