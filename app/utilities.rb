@@ -75,6 +75,3 @@ def checkName(text)
         return false
     end
 end
-
-puts checkName("Macieja")
-puts checkName("Robert")
