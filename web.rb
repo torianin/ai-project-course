@@ -39,8 +39,8 @@ class Public < Sinatra::Base
 	      session[:session_id]
 		end
 		
-		def setColor(text,color)
-			return "[[b;#{color};black]#{text}]"
+		def setColor(text)
+			return "[[b;gray;black]#{text}]"
 		end
 	end
 
@@ -64,9 +64,9 @@ class Public < Sinatra::Base
 			if checkName(params[:query])
 				session[:name] = params[:query]
 				session[:sex] = checkName(params[:query])
-				return "Witaj #{session[:name]}, czekam na pytania :p"
+				return setColor("Witaj #{session[:name]}, czekam na pytania :p")
 			else 
-				return "Albo rodzice nazwali Cię mega śmiesznie, albo nie ma takiego imienia i próbujesz mnie oszukać :p"
+				return setColor("Albo rodzice nazwali Cię mega śmiesznie, albo nie ma takiego imienia i próbujesz mnie oszukać :p")
 			end
 		end
 		query = params[:query]
@@ -77,19 +77,19 @@ class Public < Sinatra::Base
 		checkedValue = d.checkWords(query) 
 		if session[:mode] == 'auto'
 			if params[:query] == 'Cześć Robcio'
-				return setColor("Kocham Cię","red")
+				return setColor("Kocham Cię")
 			end
 			if checkedValue != true
-				return setColor(checkedValue,"red")
+				return setColor(checkedValue)
       end
       if checkExtra(query) != true
-        return setColor(checkExtra(query),"red")
+        return setColor(checkExtra(query))
 			else
 				r = Robert.instance
 				replay = r.askRobert("#{query}")
 				replay.force_encoding('UTF-8')
 				Pusher['sended-message'].trigger('sended-message', {:message => "#{replay}", :userid =>"#{getSessionId}"})
-				return replay
+				return setColor(replay)
 			end
 		else
 			return nil
