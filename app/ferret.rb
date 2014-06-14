@@ -1,5 +1,6 @@
 # encoding: utf-8
 
+require './app/utilities'
 require 'ferret'  
 require 'singleton'
 load './tori/seks.tori'
@@ -17,10 +18,10 @@ class Robert
   end
 
   def addQuestions()
-    puts @index.size
     $seks_questions.each { |question| 
       @index << question
     }
+    puts @index.size
   end
 
   def askRobert(question)

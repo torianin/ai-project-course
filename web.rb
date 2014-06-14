@@ -81,9 +81,7 @@ class Public < Sinatra::Base
         return checkExtra(query)
 			else
 				r = Robert.instance
-				query = removeSpacialChars(query)
-				replay = r.askRobert(query)
-				replay = removeSpacialChars(replay)
+				replay = r.askRobert("Boli mnie głowa")
 				Pusher['sended-message'].trigger('sended-message', {:message => "#{replay}", :userid =>"#{getSessionId}"})
 				return replay
 			end
