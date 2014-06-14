@@ -42,6 +42,10 @@ class Public < Sinatra::Base
 		def setColor(text)
 			return "[[i;white;black]#{text}]"
 		end
+
+		def setColor(text,color)
+			return "[[i;#{color};black]#{text}]"
+		end
 	end
 
 	get '/' do
@@ -77,7 +81,7 @@ class Public < Sinatra::Base
 		checkedValue = d.checkWords(query) 
 		if session[:mode] == 'auto'
 			if params[:query] == 'Cześć Robcio'
-				return setColor("Kocham Cię")
+				return setColor("Kocham Cię","red")
 			end
 			if checkedValue != true
 				return setColor(checkedValue)

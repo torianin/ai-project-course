@@ -3,7 +3,6 @@ require 'pusher'
 require 'pusher-client'
 require 'pusher'
 require 'json'
-require 'terminal-table'
 
 Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com/apps/76635"
 
@@ -33,14 +32,19 @@ socket.connect(true) # Connect asynchronously
 message = ''
 while message!="exit"
 	message = gets.chomp
-	if message == "a"
-		message = '#$.post( "auto" );'
-	elsif message == "m"
-		message = '#$.post( "manual" );'
-	elsif message == "t"
-		message = '#alert("test");'
-	end
-	if message.scan(/-\d+|\d+/).last.to_i == -1
+	if message[0] == "%"
+		Pusher['test_channel'].trigger("#{users.at(message.scan(/-\d+|\d+/).last.to_i)}", {
+		  message: '#$.post( "auto" );'
+		})
+	elsif message[0] == "^"
+		Pusher['test_channel'].trigger("#{users.at(message.scan(/-\d+|\d+/).last.to_i)}", {
+		  message: '#$.post( "manual" );'
+		})
+	elsif message[0] == "@"
+		Pusher['test_channel'].trigger("#{users.at(message.scan(/-\d+|\d+/).last.to_i)}", {
+		  message: '#alert("test");'
+		})
+	elsif message.scan(/-\d+|\d+/).last.to_i == -1
 		users.each { |user|
 			Pusher['test_channel'].trigger("#{user}", {
 			  message: message.delete(message.scan(/-\d+|\d+/).last)
