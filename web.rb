@@ -77,8 +77,8 @@ class Public < Sinatra::Base
       if checkExtra(query) != true
         return checkExtra(query)
 			else
-				a = Alice.instance
-				replay = a.askAlice(query)
+				r = Robert.instance
+				replay = a.askRobert(query)
 				Pusher['sended-message'].trigger('sended-message', {:message => "#{replay}", :userid =>"#{getSessionId}"})
 				return replay
 			end

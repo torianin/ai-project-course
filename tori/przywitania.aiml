@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- -->
+<!-- Free software (c) 2011 ALICE A.I. Foundation.   -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License     -->
+<!-- as published by the Free Software Foundation.   -->
+<!-- Complies with AIML 1.0 Tag Set Specification -->
+<!-- as adopted by the ALICE A.I. Foundation.  -->
+<!-- Last modified 10/5/2011 -->
+<!-- -->
+
+<category><pattern>HEJ _</pattern>
+<template>No hej :p</template>
+</category>
+<category><pattern>_ HEJ</pattern>
+<template>No hej :p</template>
+</category>
+<category><pattern>HEJ</pattern>
+<template>No hej :p</template>
+</category>
+<category><pattern>SIEMA _</pattern>
+<template>Siemka :p</template>
+</category>
+<category><pattern>_ SIEMA</pattern>
+<template>Siemka :p</template>
+</category>
+<category><pattern>SIEMA</pattern>
+<template>Siemka :p</template>
+</category>
+<category><pattern>CZESC _</pattern>
+<template>Witam :p</template>
+</category>
+<category><pattern>_ CZESC</pattern>
+<template>Witam :p</template>
+</category>
+<category><pattern>CZESC</pattern>
+<template>Witam :p</template>
+</category>
+<category><pattern>WITAJ _</pattern>
+<template>Cześć :p</template>
+</category>
+<category><pattern>_ WITAJ</pattern>
+<template>Cześć :p</template>
+</category>
+<category><pattern>WITAJ</pattern>
+<template>Cześć :p</template>
+</category>
+<category><pattern>WITAM _</pattern>
+<template>Witam również :p</template>
+</category>
+<category><pattern>_ WITAM</pattern>
+<template>Witam również :p</template>
+</category>
+<category><pattern>WITAM</pattern>
+<template>Witam również :p</template>
+</category>
+<category><pattern>DZIEN DOBRY _</pattern>
+<template>Dzień dobry :p</template>
+</category>
+<category><pattern>_ DZIEN DOBRY</pattern>
+<template>Dzień dobry :p</template>
+</category>
+<category><pattern>DZIEN DOBRY</pattern>
+<template>Dzień dobry :p</template>
+</category>
+</aiml>

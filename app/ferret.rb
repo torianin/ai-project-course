@@ -1,5 +1,6 @@
 require 'ferret'  
 require 'singleton'
+require './app/seks.tori'
 
 def clear()
   `rm -R ./index/*`
@@ -14,87 +15,23 @@ class Robert
   end
 
   def addQuestions()
-    @index << {  
-      :q1 => 'seks',  
-      :a => 'Przykro mi nie uprawiam przypadkowego seksu z nieznajomymi :p',  
-      :t => 'seks'  
-    }   
-
-    @index << {  
-      :q1 => 'seks',  
-      :a => 'Przykro mi nie uprawiam przypadkowego seksu z nieznajomymi :p',  
-      :t => 'seks'  
-    }   
-
-    @index << {  
-      :q1 => 'boli mnie glowa',  
-      :a => 'Dobrze, że mam tabletki na ból głowy :p',  
-      :t => 'seks'  
-    }   
-
-    @index << {  
-      :q1 => 'chce miec z toba dzieci',  
-      :a => 'No to bierzmy się do pracy :p',  
-      :t => 'seks'  
-    }   
-
-    @index << {  
-      :q1 => 'jestes (.*)',  
-      :r => 'nie jestem *',  
-      :t => 'seks'  
-    }   
-
-    @index << {  
-      :q1 => 'kocham cie', 
-      :a => ':*', 
-      :t => 'seks'   
-    }   
-
-    @index << {  
-      :q1 => 'kocham cie', 
-      :a => 'pieseł', 
-      :t => 'seks'   
-    }   
-
-    @index << {  
-      :p => 'chcesz ogladać film',
-      :q1 => 'tak',  
-      :a => 'okej to super',
-      :t => 'seks'  
-    }   
-
-    @index << {  
-      :p => 'chcesz ogladać film',
-      :q1 => 'nie',  
-      :a => 'no to smutno',
-      :t => 'seks'  
-    }   
-
-    @index << {  
-      :p => 'dobrze ze mam tabletki na ból głowy',
-      :q1 => 'nie',  
-      :a => 'działa',
-      :t => 'seks'  
-    }   
+    @index << $seks_questions
   end
 
   def askRobert(question)
-    @index.search_each("q1|q2|q3|q4:#{question}") do | id, score |  
+    @index.search_each("q:#{question}") do | id, score |  
       if @index[id][:a]!=nil
-        return "SCORE: #{score}\tTITLE: #{@index[id][:a]}" 
+        return "#{@index[id][:a]}" 
       else
         regexp_value =  /#{@index[id][:q1]}/.match(q)[1]
         a = @index[id][:r].gsub(/[*]/, regexp_value)
-        return "SCORE: #{score}\tTITLE: #{a}" 
+        return "#{a}" 
       end
     end
   end
 end
 
 #clear
-r = Robert.instance
-#r.addQuestions
-r.askRobert("kocham")
 # index.search_each('p:#{p} AND q:nie') do | id, score |  
 #     puts "SCORE: #{score}\tTITLE: #{index[id][:a]}"  
 # end

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- -->
+<!-- Free software (c) 2011 ALICE A.I. Foundation.   -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License     -->
+<!-- as published by the Free Software Foundation.   -->
+<!-- Complies with AIML 1.0 Tag Set Specification -->
+<!-- as adopted by the ALICE A.I. Foundation.  -->
+<!-- Last modified 10/5/2011 -->
+<!-- -->
+<category>
+<pattern>*</pattern>
+<template>
+<random>
+<li>Nie kumam :p</li>
+<li>Nie mam pojecia jak Ci odpowiedziec :p</li>
+<li>Mozemy zmienić temat :p</li>
+<li>Co robisz jutro o 18 :p</li>
+</random>
+</template>
+</category>
+<category><pattern>MOGE CIE POMIZIAC PO BRZUSZKU</pattern>
+<template>Pewnie.</template>
+</category>
+<category><pattern>POMOC</pattern>
+<template>Jak rozmawiasz z drugą osobą to też mówisz tylko słowo pomoc :p</template>
+</category>
+</aiml>

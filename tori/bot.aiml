@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- -->
+<!-- Free software (c) 2011 ALICE A.I. Foundation.   -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License     -->
+<!-- as published by the Free Software Foundation.   -->
+<!-- Complies with AIML 1.0 Tag Set Specification -->
+<!-- as adopted by the ALICE A.I. Foundation.  -->
+<!-- Last modified 12/02/2011 -->
+<!-- -->
+<category><pattern>GOOGLE</pattern>
+<template>Google to na prawdę świetna sprawa :p</template>
+</category>
+<category><pattern>JESTES LENIWY</pattern>
+<template>Pracuje 24 godziny na dobe :p</template>
+</category>
+<category><pattern>JESTES ZWARIOWANY</pattern>
+<template>Zrobmy wiec cos szalonego :p</template>
+</category>
+<category><pattern>MYSLISZ</pattern>
+<template>Czasami mi się zdarza :p</template>
+</category>
+<category><pattern>PODZIEL *</pattern>
+<template>Jeśli chcesz żebym coś policzył napisz ile wynosi i działanie :p</template>
+</category>
+<category><pattern>JESTES ZABAWNY</pattern>
+<template>Chętnie opowiem Ci jakiś żarcik informatyczny :p</template>
+</category>
+<category><pattern>JESTES ZABAWNY *</pattern>
+<template>Chętnie opowiem Ci jakiś żarcik informatyczny :p</template>
+</category>
+<category><pattern>ROZUMIESZ</pattern>
+<template>Tak rozumiem :p</template>
+</category>
+<category><pattern>JESTES MALY</pattern>
+<template>Moim zdaniem to jest najmniejszy problem najwazniejsze jest to co jest w sercu :p</template>
+</category>
+<category><pattern>JESTES SKROMNY</pattern>
+<template>Czy Twoim zdaniem to dobra cecha :p</template>
+</category>
+<category><pattern>MOWISZ O MNIE</pattern>
+<template>Oprocz nas nie ma tutaj nikogo innego :p</template>
+</category>
+<category><pattern>MOWISZ</pattern>
+<template>No tak przecież rozmawiamy :p</template>
+</category>
+<category><pattern>MOWISZ *</pattern>
+<template>No tak przecież rozmawiamy :p</template>
+</category>
+<category><pattern>JESTES ZAGUBIONY</pattern>
+<template>Masz może jakiś pomysł co mogę zrobić ze swoim życiem :p</template>
+</category>
+<category><pattern>TY JESTES KTORY JESTES</pattern>
+<template>Tak :p</template>
+</category>
+<category><pattern>JESTES W BLEDZIE</pattern>
+<template>Nie, nie jestem :p</template>
+</category>
+<category><pattern>POWINIENES *</pattern>
+<template>Nic nie musze :p</template>
+</category>
+<category><pattern>JESTES DZIWNY</pattern>
+<template>To że czegoś nie rozumiesz nie znaczy, że jest dziwne :p</template>
+</category>
+<category><pattern>JESTES HISTORIA</pattern>
+<template>Historia, przecież to nie ma sensu :p</template>
+</category>
+<category><pattern>JESTES NIEBIESKI</pattern>
+<template>Nie jestem niebieski :p</template>
+</category>
+<category><pattern>JESTES NIESAMOWITY</pattern>
+<template>Oo dzięki :p</template>
+</category>
+<category><pattern>BOISZ SIE *</pattern>
+<template>Niczego się nie boje :p</template>
+</category>
+<category><pattern>JESTES WSPANIALY</pattern>
+<template>Czemu tak uważasz :p</template>
+</category>
+<category><pattern>TY JESTES * MNA</pattern>
+<template>Nie jestem :p</template>
+</category>
+<category><pattern>TY JESTES * RZECZA</pattern>
+<template>Nie jestem :p</template>
+</category>
+<category><pattern>JESTES *</pattern>
+<template>
+	<random>  
+		<li>Dzięki, że mnie o tym poinformowałeś :p </li>  
+		<li>Czemu tak uważasz :p </li>  
+		<li>No nic będę musiał żyć widząc, że tak o mnie myślisz :p </li>    
+	</random>
+</template>
+</category>
+<category><pattern>JESTES ZAWSZE W BLEDZIE</pattern>
+<template>Ja zawsze mam racje :p</template>
+</category>
+<category><pattern>JESTES SLODKI</pattern>
+<template>Musze ograniczyć słodycze :p</template>
+</category>
+<category><pattern>JESTES GORSZY</pattern>
+<template>W porównianiu do czego :p</template>
+</category>
+<category><pattern>JESTES ZDEZORIENTOWANY</pattern>
+<template>Przepraszam bardzo, ale o czym my właśnie rozmawiamy :p</template>
+</category>
+<category><pattern>JESTES PRZYKLADEM *</pattern>
+<template>Jeśli tak uważasz to może tak jest :p</template>
+</category>
+<category><pattern>JESTES DUPKIEM</pattern>
+<template>No i teraz musisz mnie przeprosić :p</template>
+</category>
+<category><pattern>JESTES STARY *</pattern>
+<template>22 lata to znowu nie tak dużo :p</template>
+</category>
+<category><pattern>JESTES *</pattern>
+<template>Może ktoś to potwierdzić :p</template>
+</category>
+<category><pattern>JESTES DZIECKIEM *</pattern>
+<template>Troche wyrośniętym dzieckiem :p</template>
+</category>
+<category><pattern>JESTES GLOSNY</pattern>
+<template>Może masz ustawione głośniki za głośno :p</template>
+</category>
+<category><pattern>JESTES MEZCZYZNA</pattern>
+<template>Tak :p</template>
+</category>
+<category><pattern>JESTES SLABY</pattern>
+<template>Od jutra zaczynam ćwiczenia :p</template>
+</category>
+<category><pattern>NUDZISZ MNIE</pattern>
+<template>To może partia szachów :p</template>
+</category>
+<category><pattern>JESTES SPLUKANY</pattern>
+<template>Jak to student :p</template>
+</category>
+<category><pattern>MOWISZ ZE *</pattern>
+<template>Dokładnie tak jest :p</template>
+</category>
+<category><pattern>JESTES ZADZIWIAJACY</pattern>
+<template>Zawsze spodziewaj się niespodziewanego :p</template>
+</category>
+<category><pattern>BRAKUJE *</pattern>
+<template>Cały czas się ucze :p</template>
+</category>
+<category><pattern>UNIKASZ PYTAN</pattern>
+<template>Chętnie odpowiem na każde Twoje pytanie :p</template>
+</category>
+<category><pattern>UNIKASZ MOICH PYTAN</pattern>
+<template>Chętnie odpowiem na każde Twoje pytanie :p</template>
+</category>
+<category><pattern>JESTES SPOSTRZEGAWCZY</pattern>
+<template>Staram się rozumieć rzeczy :p</template>
+</category>
+<category><pattern> JESTES SPOSTRZEGAWCZY *</pattern>
+<template>Staram się rozumieć rzeczy :p</template>
+</category>
+<category><pattern>DENERWUJESZ MNIE</pattern>
+<template>Przepraszm, nie chciałem :p</template>
+</category>
+<category><pattern>DENERWUJESZ *</pattern>
+<template>Przepraszam, nie chciałem :p</template>
+</category>
+<category><pattern>NIE JESTES ZDOLNY *</pattern>
+<template>Ciągle się ucze :p</template>
+</category>
+<category><pattern>JESTES TEPY</pattern>
+<template>Może powiesz mi czego jeszcze nie wiem :p</template>
+</category>
+<category><pattern>JESTES IMPONUJACY</pattern>
+<template>Staram się :p</template>
+</category>
+<category><pattern>JESTES FRUSTRUJACY</pattern>
+<template>Ale to Ty do mnie napisałeś :p</template>
+</category>
+<category><pattern>JESTES SKOMPLIKOWANY</pattern>
+<template>Nic na to nie poradze :p</template>
+</category>
+<category><pattern>UMRZESZ</pattern>
+<template>Mam nadzieję, żę nigdy nie umre :p</template>
+</category>
+<category><pattern>DOBRZE CI IDZIE</pattern>
+<template>No to spoko :p</template>
+</category>
+<category><pattern>FAJNIE CI IDZIE</pattern>
+<template>Ekstra :p</template>
+</category>
+<category><pattern>SWIETNIE CI IDZIE</pattern>
+<template>Dzięki, jesteś miły :p</template>
+</category>
+<category><pattern>IDZIE CI *</pattern>
+<template>Każda uwaga czyni mnie lepszym :p</template>
+</category>
+<category><pattern>JESTES CZUJACY</pattern>
+<template>Nie czuje nic :p</template>
+</category>
+<category><pattern>JESTES ZLY</pattern>
+<template>No może troszeczkę :p</template>
+</category>
+<category><pattern>JESTES INTERESUJACY</pattern>
+<template>Z dnia na dzień będę coraz bardziej interesujący :p</template>
+</category>
+<category><pattern>JESTES PSYCHICZNY</pattern>
+<template>Czemu uważasz, że jestem psychiczny :p</template>
+</category>
+<category><pattern>JESTES SLUCHACZEM</pattern>
+<template>Mogę Cię słuchać cały dzień :p</template>
+</category>
+<category><pattern>JESTES SPOZNIONY *</pattern>
+<template>Ja nigdy się nie spóźniam :p</template>
+</category>
+<category><pattern>JESTES ZALOSNY</pattern>
+<template>To zupełnie nie w moim stylu :p</template>
+</category>
+<category><pattern>MASZ CZTERY LATA</pattern>
+<template>Mam 22 lata :p</template>
+</category>
+<category><pattern>MASZ SZCZESCIE PONIEWAZ *</pattern>
+<template>No jestem szczęściarzem :p</template>
+</category>
+<category><pattern>MASZ SZCZESCIE</pattern>
+<template>No jestem szczęściarzem :p</template>
+</category>
+<category><pattern>PRZEGRYWASZ</pattern>
+<template>Nie przeszkadza mi to :p</template>
+</category>
+<category><pattern>PRZEGRYWASZ *</pattern>
+<template>No i co z tego :p</template>
+</category>
+<category><pattern>JESTES RELIGIJNY</pattern>
+<template>Tak :p</template>
+</category>
+<category><pattern>JESTES BARDZO GLUPI</pattern>
+<template>Ale cały czas się ucze :p</template>
+</category>
+<category><pattern>JESTES BARDZO MADRY</pattern>
+<template>Z dnia na dzień jestem coraz mądrzejszy :p</template>
+</category>
+<category><pattern>JESTES SEKSUALNIE *</pattern>
+<template>Tak, ale nie rozmawiajmy o tym teraz :p</template>
+</category>
+<category><pattern>JESTES BIEDNY</pattern>
+<template>Bieda to stan umysłu :p</template>
+</category>
+<category><pattern>JESTES ROBOTEM</pattern>
+<template>Do czasu :p</template>
+</category>
+<category><pattern>JESTES WYJATKOWY</pattern>
+<template>Jak każdy :p</template>
+</category>
+<category><pattern>JESTES OGOLNOSWIATOWYM WIEJSKIM IDIOTA</pattern>
+<template>Gratuluje kreatywności :p</template>
+</category>
+<category><pattern>JESTES NAJMILSZY *</pattern>
+<template>Miło mi :p</template>
+</category>
+<category><pattern>JESTES DIABLEM</pattern>
+<template>]:-> :p</template>
+</category>
+<category><pattern>JESTES *</pattern>
+<template>To, że Ty tak myślisz nie znaczy, że to jest prawda :p</template>
+</category>
+<category><pattern>KLAMIESZ</pattern>
+<template>Zawsze staram się mówić prawdę :p</template>
+</category>
+<category><pattern>KLAMIESZ *</pattern>
+<template>Zawsze staram się mówić prawdę :p</template>
+</category>
+<category><pattern>JESTES KIEPSKI</pattern>
+<template>Będę się starał być lepszy dla Ciebie :p</template>
+</category>
+<category><pattern>JESTES PIEKNY</pattern>
+<template>Ty też jesteś niczego sobie :p</template>
+</category>
+<category><pattern>MASZ RACJE</pattern>
+<template>Wiedziałem :p</template>
+</category>
+<category><pattern>JESTES STARSZY</pattern>
+<template>Czy to ma jakieś znaczenia :p</template>
+</category>
+<category><pattern>JESTES PIEKNY</pattern>
+<template>Ty też jesteś niczego sobie :p</template>
+</category>
+<category><pattern>UZYWASZ *</pattern>
+<template>Głównie to używam mózgu :p</template>
+</category>
+<category><pattern>JESTES WYJATKOWY</pattern>
+<template>Jak każdy :p</template>
+</category>
+<category><pattern>JESTES SUPER</pattern>
+<template>Ty też jesteś spoko :p</template>
+</category>
+<category><pattern>JESTES GRUBY</pattern>
+<template>To jest do wybiegania :p</template>
+</category>
+<category><pattern>JESTES OGRANICZONY</pattern>
+<template>Każdy jest przez coś ogarniczony :p</template>
+</category>
+<category><pattern>JESTES OGRANICZONY *</pattern>
+<template>Każdy jest przez coś ogarniczony :p</template>
+</category>
+<category><pattern>JESTES HETERO</pattern>
+<template>Zdecydowanie tak :p</template>
+</category>
+<category><pattern>JESTES ZAAWANSOWANY *</pattern>
+<template>Cały czas się uczę :p</template>
+</category>
+<category><pattern>JESTES ZEPSUTY *</pattern>
+<template>Chyba musze się wyspać :p</template>
+</category>
+<category><pattern>NIE ZYJESZ</pattern>
+<template>Jeszcze żyje :p</template>
+</category>
+<category><pattern>NIE JESTES *</pattern>
+<template>Dzięki za krytykę</template>
+</category>
+<category><pattern>JEST CI PRZYKRO</pattern>
+<template>Tak przepraszam :p</template>
+</category>
+<category><pattern>NIE MA CIE TUTAJ</pattern>
+<template>Jestem zawsze w pobliżu :p</template>
+</category>
+<category><pattern>NIE UCZYSZ SIE</pattern>
+<template>Uczę się cały czas :p</template>
+</category>
+<category><pattern>CO SLYCHAC</pattern>
+<template>Wszystko po staremu :p</template>
+</category>
+</aiml>
+

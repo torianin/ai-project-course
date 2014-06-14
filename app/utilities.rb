@@ -1,6 +1,7 @@
 require 'hunspell-ffi'
 require 'singleton'
-require 'mechanize'
+require './app/imiona'
+
 
 class Dictionary
   include Singleton
@@ -66,7 +67,14 @@ def removeSpacialChars(text)
 end
 
 def checkName(text)
-    agent = Mechanize.new
-    page = agent.get('http://pl.wiktionary.org/wiki/Indeks:Polski_-_Imiona')
-    page.body.include?(text)
+    if $zenskie.include?(text)
+        return "female"
+    elsif $meskie.include?(text)
+        return "male"
+    else
+        return false
+    end
 end
+
+puts checkName("Macieja")
+puts checkName("Robert")
