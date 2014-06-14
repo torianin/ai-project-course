@@ -56,6 +56,7 @@ class Public < Sinatra::Base
 		if session[:name] == nil
 			if checkName(params[:query])
 				session[:name] = params[:query]
+				return "Witaj #{session[:name]} :p"
 			else 
 				return "Albo rodzice nazwali Cię mega śmiesznie, albo nie ma takiego imienia i próbujesz mnie oszukać :p"
 			end
