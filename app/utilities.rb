@@ -67,6 +67,12 @@ def removeSpacialChars(text)
     text
 end
 
+def removeSomeChars(text)
+    text
+    text.gsub!(/[?!;:]/,'')
+    text
+end
+
 def checkName(text)
     if $zenskie.include?(text)
         return "female"

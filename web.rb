@@ -38,12 +38,17 @@ class Public < Sinatra::Base
 		def getSessionId
 	      session[:session_id]
 		end
+		
+		def setColor(text,color)
+
+			return "[[b;#{color};black]" + text + "]"
+		end
 	end
 
 	get '/' do
 		getSessionId
 		session[:name] = nil
-		session[:mode] = 'auto'
+		session[:mode] = 'auto'Jes
 		erb :index
 	end
 
@@ -66,19 +71,20 @@ class Public < Sinatra::Base
 			end
 		end
 		query = params[:query]
+		query = removeSomeChars(query)
 		addQuery(query,getSessionId)
 		Pusher['sended-message'].trigger('sended-message', {:message => "#{query}", :userid =>"#{getSessionId}"})
 		d = Dictionary.instance
 		checkedValue = d.checkWords(query) 
 		if session[:mode] == 'auto'
 			if params[:query] == 'Cześć Robcio'
-				return "[[b;red;black]Kocham Cię]"
+				return setColor("Kocham Cię","red")
 			end
 			if checkedValue != true
-				return checkedValue
+				return setColor(checkedValue,"red")
       end
       if checkExtra(query) != true
-        return checkExtra(query)
+        return setColor(checkExtra(query),"red")
 			else
 				r = Robert.instance
 				replay = r.askRobert("#{query}")
