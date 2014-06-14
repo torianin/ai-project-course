@@ -4,6 +4,9 @@ require './app/utilities'
 require 'ferret'  
 require 'singleton'
 load './tori/seks.tori'
+load './tori/przywitania.tori'
+load './tori/przeklenstwa.tori'
+load './tori/bot.tori'
 
 def clear()
   `rm -R ./index/*`
