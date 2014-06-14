@@ -1,6 +1,6 @@
 require 'ferret'  
 require 'singleton'
-require './app/seks.tori'
+load './app/seks.tori'
 
 def clear()
   `rm -R ./index/*`
