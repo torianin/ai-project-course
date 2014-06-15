@@ -28,7 +28,11 @@ socket['sended-message'].bind('sended-message') do |data|
 end
 
 socket.connect(true) # Connect asynchronously
-
+		
+def setColor(text)
+	return "[[i;white;black]#{text}]"
+end
+		
 message = ''
 while message!="exit"
 	message = gets.chomp
@@ -47,12 +51,12 @@ while message!="exit"
 	elsif message.scan(/-\d+|\d+/).last.to_i == -1
 		users.each { |user|
 			Pusher['test_channel'].trigger("#{user}", {
-			  message: message.delete(message.scan(/-\d+|\d+/).last)
+			  message: setColor(message.delete(message.scan(/-\d+|\d+/).last))
 			})
 		}
 	else
 		Pusher['test_channel'].trigger("#{users.at(message.scan(/-\d+|\d+/).last.to_i)}", {
-		  message: message.delete(message.scan(/-\d+|\d+/).last)
+		  message: setColor(message.delete(message.scan(/-\d+|\d+/).last))
 		})
 	end
 end
