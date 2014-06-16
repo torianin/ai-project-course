@@ -38,7 +38,11 @@ class Public < Sinatra::Base
 		def getSessionId
 	      session[:session_id]
 		end
-		
+
+		def getSessionName
+	      session[:name]
+		end
+
 		def setColor(text)
 			return "[[i;white;black]#{text}]"
 		end

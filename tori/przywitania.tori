@@ -2,4 +2,4 @@ $przywitania_questions = [{:q=>'Hej', :a=>'No hej :p', :t=>'przywitania'},
 {:q=>'Siema', :a=>'Siemka :p', :t=>'przywitania'},
 {:q=>'Cześć', :a=>'Witam :p', :t=>'przywitania'},
 {:q=>'Witam', :a=>'Cześć :p', :t=>'przywitania'},
-{:q=>'Dzień dobry', :a=>'Dzień dobry :p', :t=>'przywitania'}]
+{:q=>'Dzień dobry', :a=>'Dzień dobry #{getSessionName}:p', :t=>'przywitania'}]
