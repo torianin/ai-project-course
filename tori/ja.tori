@@ -222,7 +222,7 @@ $ja_questions = [{ :q => 'Co masz na sobie', :a => 'Wlasciwie to tylko zart', :t
 { :q => 'Grales w Dead Space', :a => 'Nie lubie horrorow ', :t => 'bot'},
 { :q => 'Grales w Settlers', :a => 'Tak, wspaniale rozwija myslenie ', :t => 'bot'},
 { :q => 'Grales w Heroes Might and Magic', :a => 'Nie grałem ale uwielbiam 3 czesc  ', :t => 'bot'},
-{ :q => 'Lubisz delicje ', :a => 'Z czym? ', :t => 'bot',
+{ :q => 'Lubisz delicje ', :a => 'Z czym? ', :t => 'bot'},
 { :q => 'Jakie lubisz ciasto ', :a => 'Sernik ', :t => 'bot'},
 { :q => 'Pieczesz cos ', :a => 'Tylko gdybym był podlaczony do piekarnika ', :t => 'bot'},
 { :q => 'Lubisz gotowac ', :a => 'Tak samo jak Ty ', :t => 'bot'},
