@@ -1,0 +1,5 @@
+$special_questions = 
+[{ :q =>'Koper to chuj', :a =>'Mi się dobrze z nim mieszkało :p', :t =>'special'},
+{ :q =>'Witałeś się już dzisiaj z Paulą', :a =>'Jeszcze nie, ale zrobie to zaraz z przyjemnością :p', :t =>'special'},
+{ :q =>'Robert', :a =>'Tak właśnie się nazywam :p', :t =>'special'},
+{ :q =>'Torianin', :a =>'Kiedyś używałem tori od to Robert Ignasiak, ale zawsze było zajęte i używam teraz torianin :p', :t =>'special'}]

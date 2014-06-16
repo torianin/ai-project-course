@@ -8,6 +8,7 @@ load './tori/przywitania.tori'
 load './tori/przeklenstwa.tori'
 load './tori/bot.tori'
 load './tori/ja.tori'
+load './tori/special.tori'
 
 def clear()
   `rm -R ./index/*`
@@ -35,6 +36,9 @@ class Robert
       @index << question
     }
     $ja_questions.each { |question|  
+      @index << question
+    }
+    $special_questions.each { |question|  
       @index << question
     }
     puts @index.size
