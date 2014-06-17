@@ -47,7 +47,11 @@ class Robert
   def askRobert(question)
     @index.search_each("q:#{question}") do | id, score |  
       if @index[id][:a]!=nil
-        return "#{@index[id][:a]}" 
+        if "#{@index[id][:a]}"[0] == "$" 
+          eval("#{@index[id][:a]}"[1..-1])
+        else
+          return "#{@index[id][:a]}" 
+        end
       else
         regexp_value =  /#{@index[id][:q1]}/.match(q)[1]
         a = @index[id][:r].gsub(/[*]/, regexp_value)

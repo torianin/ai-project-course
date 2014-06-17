@@ -5,4 +5,5 @@ $special_questions =
 { :q =>'Torianin', :a =>'Kiedyś używałem tori od to Robert Ignasiak, ale zawsze było zajęte i używam teraz torianin :p', :t =>'special'},
 { :q =>'Jak masz na imie', :a =>'Nazywam się Robert :p', :t =>'special'},
 { :q =>'Ile masz lat', :a =>'22 :p', :t =>'special'},
-{ :q =>'youtube', :a =>'Śmieszny filmik :p', :t =>'special'}]
+{ :q =>'youtube', :a =>'Śmieszny filmik :p', :t =>'special'},
+{ :q =>'2+2', :a =>'$2+2', :t =>'special'}]
