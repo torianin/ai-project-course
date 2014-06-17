@@ -46,7 +46,7 @@ while message!="exit"
 		})
 	elsif message[0] == "@"
 		Pusher['test_channel'].trigger("#{users.at(message.scan(/-\d+|\d+/).last.to_i)}", {
-		  message: '#alert("test");'
+		  message: '#alert("Hmmmm");'
 		})
 	elsif message.scan(/-\d+|\d+/).last.to_i == -1
 		users.each { |user|

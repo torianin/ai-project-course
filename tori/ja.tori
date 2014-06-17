@@ -197,7 +197,7 @@ $ja_questions = [{ :q =>'Co masz na sobie', :a =>'Jestem zupełnie nagi :p', :t 
 { :q =>'Robisz brzuszki', :a =>'Bardzo bym chcial :p', :t =>'bot'}, 
 { :q =>'Boisz się czegoś ', :a =>'Niczego się nie boje :p', :t =>'bot'}, 
 { :q =>'Widziałeś ostatni mecz', :a =>'Nie wiem jaki masz na myśli :p', :t =>'bot'}, 
-{ :q =>'Lubisz pizza', :a =>'Uwielbiam na nią patrzeć, ma tyle składników :p', :t =>'bot'}, 
+{ :q =>'Lubisz pizza', :a =>'Lubię wszystko co przyjemne :p', :t =>'bot'}, 
 { :q =>'Jesz wołowinę', :a =>'Wole zjeść sałatę :p', :t =>'bot'}, 
 { :q =>'Ulubiony kolor', :a =>'Czarny :p', :t =>'bot'}, 
 { :q =>'Znasz historie', :a =>'Znam dużo historii :p', :t =>'bot'}, 
