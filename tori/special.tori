@@ -7,4 +7,4 @@ $special_questions =
 { :q =>'Ile masz lat', :a =>'22 :p', :t =>'special'},
 { :q =>'youtube', :a =>'Śmieszny filmik :p', :t =>'special'},
 { :q =>'Pi', :a =>'$Math::PI', :t =>'special'},
-{ :q =>'Jak Cię nazwali rodzice', :a =>'$@index.search("Jak masz na imie")', :t =>'special'}]
+{ :q =>'Jak Cię nazwali rodzice', :a =>'$@index.search("Jak masz na imie").first', :t =>'special'}]
