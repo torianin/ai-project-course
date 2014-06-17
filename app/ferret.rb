@@ -48,7 +48,7 @@ class Robert
     @index.search_each("q:#{question}") do | id, score |  
       if @index[id][:a]!=nil
         if "#{@index[id][:a]}"[0] == "$" 
-          return "#{@index[id][:a]}"[1..-1]
+          eval("#{@index[id][:a]}"[1..-1])
         else
           return "#{@index[id][:a]}" 
         end
