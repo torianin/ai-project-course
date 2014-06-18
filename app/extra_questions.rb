@@ -6,7 +6,7 @@ Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com
 def checkExtra(question)
   if question == "robię kluski"
       Pusher['test_channel'].trigger("#{session[:session_id]}", {
-        message: '#setTimeout(function() { alert("Kluski gotowe"); }, 1);'
+        message: '#setTimeout(function() { alert("Kluski gotowe"); }, 600000);'
       })
      return "Przypomne Ci o tym za 10 min :p"
 	elsif question =~ /godzin/
