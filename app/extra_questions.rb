@@ -1,6 +1,15 @@
+require 'pusher'
+require 'pusher-client'
+
+Pusher.url = "http://0b6500a2c511ef6a91ba:81572065aa966eb9805d@api.pusherapp.com/apps/76635"
+APP_KEY = '0b6500a2c511ef6a91ba'
+
 def checkExtra(question)
   if question == "robię kluski"
-    return '#setTimeout(function() { alert("Kluski gotowe"); }, 600000);'
+      Pusher['test_channel'].trigger("#{session[:session_id]}", {
+        message: '#setTimeout(function() { alert("Kluski gotowe"); }, 600000);'
+      })
+     return "Dodałem przypomnienie"
 	elsif question =~ /godzin/
 		t = Time.now
     t.utc
