@@ -7,9 +7,9 @@ APP_KEY = '0b6500a2c511ef6a91ba'
 def checkExtra(question)
   if question == "robię kluski"
       Pusher['test_channel'].trigger("#{session[:session_id]}", {
-        message: '#setTimeout(function() { alert("Kluski gotowe"); }, 600000);'
+        message: '#setTimeout(function() { alert("Kluski gotowe"); }, 10);'
       })
-     return "Dodałem przypomnienie"
+     return "Przypomne Ci o tym za 10 min :p"
 	elsif question =~ /godzin/
 		t = Time.now
     t.utc
