@@ -1,5 +1,7 @@
 def checkExtra(question)
-	if question =~ /godzin/
+  if question == "robię kluski"
+    return '#setTimeout(function() { alert("Kluski gotowe"); }, 600000);'
+	elsif question =~ /godzin/
 		t = Time.now
     t.utc
     t = t + 2*3600
